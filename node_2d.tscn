@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://animated_sprite_2d.gd" id="4_yrub2"]
 [ext_resource type="Texture2D" uid="uid://bs1j5csu0ndwq" path="res://Sprites/mikol_back_idle.png" id="5_lyask"]
 [ext_resource type="Texture2D" uid="uid://dpudv1xt0crmy" path="res://Sprites/partikiel.png" id="11_h3syk"]
-[ext_resource type="Texture2D" uid="uid://dyep5jwvgv3t4" path="res://Sprites/wall.png" id="11_wm6pb"]
+[ext_resource type="Texture2D" uid="uid://dyep5jwvgv3t4" path="res://wall.png" id="11_wm6pb"]
 [ext_resource type="Script" path="res://gpu_particles_2d.gd" id="12_d3pgr"]
 [ext_resource type="Texture2D" uid="uid://dm8c4711e7cy7" path="res://Sprites/king.png" id="12_onjak"]
 
