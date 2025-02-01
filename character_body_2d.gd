@@ -10,10 +10,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_left"):
 		direction.x -= 1  
 	if Input.is_action_pressed("ui_down"):
-		direction.y += 1  
+			direction.y += 1  
 	if Input.is_action_pressed("ui_up"):
 		direction.y -= 1  
 		
+
+
 	if direction.length() > 0:
 		direction = direction.normalized()
 
