@@ -80,9 +80,9 @@ func _physics_process(delta: float) -> void:
 	elif dash_delay < dash_max_delay:
 		dash_delay += delta
 		
-	velocity = direction * current_speed
+	velocity = direction * current_speed * delta
 	
-	move_and_slide()
+	move_and_collide(velocity)
 	
 func apply_impulse(force: Vector2) -> void: 
 	if !was_damaged: 

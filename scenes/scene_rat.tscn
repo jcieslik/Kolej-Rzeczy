@@ -1,102 +1,102 @@
 [gd_scene load_steps=45 format=3 uid="uid://bxvq8ru2yqjh0"]
 
-[ext_resource type="Script" path="res://Scripts/rat_script.gd" id="1_w6swb"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="2_fwm02"]
-[ext_resource type="Texture2D" uid="uid://c2v6y333rmykh" path="res://Sprites/mikol_front_idle.png" id="3_fl3eb"]
-[ext_resource type="Texture2D" uid="uid://db244fphbprjx" path="res://Sprites/mikol_left_idle.png" id="4_vndry"]
-[ext_resource type="Texture2D" uid="uid://ewk5lfau2y44" path="res://Sprites/mikol_right_idle.png" id="5_rap3n"]
-[ext_resource type="Texture2D" uid="uid://bs1j5csu0ndwq" path="res://Sprites/mikol_back_idle.png" id="6_2qbdv"]
-[ext_resource type="Texture2D" uid="uid://claqfokbwafh3" path="res://Sprites/mikol_front_sheet.png" id="7_4m5qu"]
-[ext_resource type="Texture2D" uid="uid://c4h4d8o6u8rs" path="res://Sprites/mikol_left.png" id="8_3yfaf"]
-[ext_resource type="Texture2D" uid="uid://dkhwec1vg55y3" path="res://Sprites/mikol_right.png" id="9_n161c"]
-[ext_resource type="Texture2D" uid="uid://dnngd7y4feyai" path="res://Sprites/mikol_back_sheet.png" id="10_tmipa"]
-[ext_resource type="Script" path="res://animated_sprite_2d.gd" id="11_lxwb4"]
-[ext_resource type="Texture2D" uid="uid://dpudv1xt0crmy" path="res://Sprites/partikiel.png" id="12_smve3"]
-[ext_resource type="Script" path="res://gpu_particles_2d.gd" id="13_5xa6o"]
-[ext_resource type="Texture2D" uid="uid://bs6mbbo3vvemy" path="res://Sprites/rat_left_sheet.png" id="14_7u1ts"]
-[ext_resource type="Texture2D" uid="uid://0ybbo4yqu82d" path="res://Sprites/rat_right_sheet.png" id="15_t5ooh"]
+[ext_resource type="Script" path="res://Scripts/rat_script.gd" id="1_godia"]
+[ext_resource type="Texture2D" uid="uid://bs6mbbo3vvemy" path="res://Sprites/rat_left_sheet.png" id="2_krqpj"]
+[ext_resource type="Texture2D" uid="uid://0ybbo4yqu82d" path="res://Sprites/rat_right_sheet.png" id="3_ehdtf"]
+[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="4_g2fk6"]
+[ext_resource type="Texture2D" uid="uid://c2v6y333rmykh" path="res://Sprites/mikol_front_idle.png" id="5_voax3"]
+[ext_resource type="Texture2D" uid="uid://db244fphbprjx" path="res://Sprites/mikol_left_idle.png" id="6_35xps"]
+[ext_resource type="Texture2D" uid="uid://ewk5lfau2y44" path="res://Sprites/mikol_right_idle.png" id="7_8bq6k"]
+[ext_resource type="Texture2D" uid="uid://bs1j5csu0ndwq" path="res://Sprites/mikol_back_idle.png" id="8_n74bp"]
+[ext_resource type="Texture2D" uid="uid://claqfokbwafh3" path="res://Sprites/mikol_front_sheet.png" id="9_3ucvi"]
+[ext_resource type="Texture2D" uid="uid://c4h4d8o6u8rs" path="res://Sprites/mikol_left.png" id="10_rhg55"]
+[ext_resource type="Texture2D" uid="uid://dkhwec1vg55y3" path="res://Sprites/mikol_right.png" id="11_i6ftm"]
+[ext_resource type="Texture2D" uid="uid://dnngd7y4feyai" path="res://Sprites/mikol_back_sheet.png" id="12_nl1g7"]
+[ext_resource type="Script" path="res://Scripts/animated_sprite_2d.gd" id="13_sknly"]
+[ext_resource type="Texture2D" uid="uid://dpudv1xt0crmy" path="res://Sprites/partikiel.png" id="14_ajwvh"]
+[ext_resource type="Script" path="res://gpu_particles_2d.gd" id="15_kovkl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2iogr"]
 size = Vector2(32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1sxo"]
-atlas = ExtResource("3_fl3eb")
+atlas = ExtResource("5_voax3")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_26115"]
-atlas = ExtResource("3_fl3eb")
+atlas = ExtResource("5_voax3")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2jar5"]
-atlas = ExtResource("4_vndry")
+atlas = ExtResource("6_35xps")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h4dno"]
-atlas = ExtResource("4_vndry")
+atlas = ExtResource("6_35xps")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qeg4"]
-atlas = ExtResource("5_rap3n")
+atlas = ExtResource("7_8bq6k")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4rgjy"]
-atlas = ExtResource("5_rap3n")
+atlas = ExtResource("7_8bq6k")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r0x7h"]
-atlas = ExtResource("6_2qbdv")
+atlas = ExtResource("8_n74bp")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ano3"]
-atlas = ExtResource("6_2qbdv")
+atlas = ExtResource("8_n74bp")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ciagv"]
-atlas = ExtResource("7_4m5qu")
+atlas = ExtResource("9_3ucvi")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0dlyt"]
-atlas = ExtResource("7_4m5qu")
+atlas = ExtResource("9_3ucvi")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_if5np"]
-atlas = ExtResource("7_4m5qu")
+atlas = ExtResource("9_3ucvi")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iwpoj"]
-atlas = ExtResource("8_3yfaf")
+atlas = ExtResource("10_rhg55")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1h6b3"]
-atlas = ExtResource("8_3yfaf")
+atlas = ExtResource("10_rhg55")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3o4qb"]
-atlas = ExtResource("8_3yfaf")
+atlas = ExtResource("10_rhg55")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s3p12"]
-atlas = ExtResource("9_n161c")
+atlas = ExtResource("11_i6ftm")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0i7ns"]
-atlas = ExtResource("9_n161c")
+atlas = ExtResource("11_i6ftm")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lqvnk"]
-atlas = ExtResource("9_n161c")
+atlas = ExtResource("11_i6ftm")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gvo51"]
-atlas = ExtResource("10_tmipa")
+atlas = ExtResource("12_nl1g7")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q58h2"]
-atlas = ExtResource("10_tmipa")
+atlas = ExtResource("12_nl1g7")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqoat"]
-atlas = ExtResource("10_tmipa")
+atlas = ExtResource("12_nl1g7")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_byp24"]
@@ -224,19 +224,19 @@ gravity = Vector3(0, 98, 0)
 size = Vector2(29, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gxowe"]
-atlas = ExtResource("14_7u1ts")
+atlas = ExtResource("2_krqpj")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oiiwp"]
-atlas = ExtResource("14_7u1ts")
+atlas = ExtResource("2_krqpj")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0rqy"]
-atlas = ExtResource("15_t5ooh")
+atlas = ExtResource("3_ehdtf")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3yf2g"]
-atlas = ExtResource("15_t5ooh")
+atlas = ExtResource("3_ehdtf")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q3a1d"]
@@ -268,39 +268,42 @@ animations = [{
 
 [node name="Obj_Mikol" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(160, 120)
-script = ExtResource("2_fwm02")
+script = ExtResource("4_g2fk6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obj_Mikol"]
+physics_interpolation_mode = 1
 shape = SubResource("RectangleShape2D_2iogr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Obj_Mikol"]
 sprite_frames = SubResource("SpriteFrames_byp24")
 animation = &"idle_down"
 autoplay = "move_down"
-script = ExtResource("11_lxwb4")
+script = ExtResource("13_sknly")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Obj_Mikol"]
 show_behind_parent = true
 emitting = false
 amount = 6
 process_material = SubResource("ParticleProcessMaterial_ldmrl")
-texture = ExtResource("12_smve3")
+texture = ExtResource("14_ajwvh")
 lifetime = 0.3
 explosiveness = 0.8
 randomness = 0.05
 trail_lifetime = 0.01
-script = ExtResource("13_5xa6o")
+script = ExtResource("15_kovkl")
 
 [node name="Camera2D" type="Camera2D" parent="Obj_Mikol"]
+visible = false
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(96, 97)
-script = ExtResource("1_w6swb")
+script = ExtResource("1_godia")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+physics_interpolation_mode = 1
 position = Vector2(-0.5, 2.5)
 shape = SubResource("RectangleShape2D_51jln")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_q3a1d")
-animation = &"rat_right"
+animation = &"rat_left"

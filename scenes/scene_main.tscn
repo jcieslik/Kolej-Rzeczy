@@ -1,6 +1,6 @@
 [gd_scene load_steps=40 format=3 uid="uid://hgbjjpgiq5u"]
 
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_ivbsa"]
+[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="1_ivbsa"]
 [ext_resource type="Texture2D" uid="uid://c2v6y333rmykh" path="res://Sprites/mikol_front_idle.png" id="2_5u6ul"]
 [ext_resource type="Texture2D" uid="uid://db244fphbprjx" path="res://Sprites/mikol_left_idle.png" id="3_24j0e"]
 [ext_resource type="Texture2D" uid="uid://ewk5lfau2y44" path="res://Sprites/mikol_right_idle.png" id="4_t00bw"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c4h4d8o6u8rs" path="res://Sprites/mikol_left.png" id="7_v08xj"]
 [ext_resource type="Texture2D" uid="uid://dkhwec1vg55y3" path="res://Sprites/mikol_right.png" id="8_g1ku2"]
 [ext_resource type="Texture2D" uid="uid://dnngd7y4feyai" path="res://Sprites/mikol_back_sheet.png" id="9_1twd8"]
-[ext_resource type="Script" path="res://animated_sprite_2d.gd" id="10_r7f5t"]
+[ext_resource type="Script" path="res://Scripts/animated_sprite_2d.gd" id="10_r7f5t"]
 [ext_resource type="Texture2D" uid="uid://dpudv1xt0crmy" path="res://Sprites/partikiel.png" id="11_41hh5"]
 [ext_resource type="Script" path="res://gpu_particles_2d.gd" id="12_hx611"]
 [ext_resource type="Texture2D" uid="uid://dyep5jwvgv3t4" path="res://wall.png" id="13_c7kif"]
@@ -225,7 +225,7 @@ size = Vector2(32, 29)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2xkf"]
 size = Vector2(30, 30)
 
-[node name="Node2D" type="Node2D"]
+[node name="Scene_Main" type="Node2D"]
 position = Vector2(57, 26)
 
 [node name="Obj_Mikol" type="CharacterBody2D" parent="." groups=["player"]]
