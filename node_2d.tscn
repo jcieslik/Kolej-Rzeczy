@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://hgbjjpgiq5u"]
+[gd_scene load_steps=40 format=3 uid="uid://hgbjjpgiq5u"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_w5pt3"]
 [ext_resource type="Texture2D" uid="uid://claqfokbwafh3" path="res://Sprites/mikol_front_sheet.png" id="2_ii3w0"]
@@ -11,7 +11,9 @@
 [ext_resource type="Script" path="res://animated_sprite_2d.gd" id="4_yrub2"]
 [ext_resource type="Texture2D" uid="uid://bs1j5csu0ndwq" path="res://Sprites/mikol_back_idle.png" id="5_lyask"]
 [ext_resource type="Texture2D" uid="uid://dyep5jwvgv3t4" path="res://Sprites/wall.png" id="11_wm6pb"]
+[ext_resource type="Script" path="res://krol.gd" id="12_fftrf"]
 [ext_resource type="Texture2D" uid="uid://dm8c4711e7cy7" path="res://Sprites/king.png" id="12_onjak"]
+[ext_resource type="Script" path="res://otoczenie_krola.gd" id="14_j5kiq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjeav"]
 size = Vector2(32, 32)
@@ -217,6 +219,9 @@ size = Vector2(32, 29)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2xkf"]
 size = Vector2(30, 30)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0bl7"]
+size = Vector2(43, 41)
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(57, 26)
 
@@ -246,6 +251,7 @@ shape = SubResource("RectangleShape2D_mv63d")
 texture = ExtResource("11_wm6pb")
 
 [node name="krol" type="StaticBody2D" parent="."]
+script = ExtResource("12_fftrf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="krol"]
 shape = SubResource("RectangleShape2D_d2xkf")
@@ -259,3 +265,10 @@ offset_top = -12.0
 offset_right = 21.0
 offset_bottom = 11.0
 text = "KING"
+
+[node name="otoczenie_krola" type="Area2D" parent="krol"]
+script = ExtResource("14_j5kiq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="krol/otoczenie_krola"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_u0bl7")
