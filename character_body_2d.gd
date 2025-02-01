@@ -13,11 +13,21 @@ var dash_duration = 0.18 # Duration of whole dash
 var dash_delay = 0.0
 var dash_max_delay = 0.36 # delay between dashes
 
+var damage_delay = 0.0
+var damage_max_delay = 0.5
+var was_damaged = false
+
 func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Vector2.ZERO
 	var current_speed = speed
 	
 	current_state = MovementState.IDLE
+	
+	if was_damaged and damage_delay < damage_max_delay: 
+		damage_delay += delta
+		
+	if damage_delay > damage_max_delay:
+		was_damaged = false
 
 	if !dash_started: 	
 		if Input.is_action_pressed("ui_right"):
@@ -71,10 +81,13 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * current_speed
 	
 	move_and_slide()
-	
-	if get_slide_collision_count() > 0:
-		velocity = Vector2.ZERO 
 
+func apply_impulse(force: Vector2) -> void: 
+	if !was_damaged: 
+		velocity += force
+		was_damaged = true
+		move_and_slide()
+	 
 enum MovementState {
 	IDLE,
 	RUNNING,
