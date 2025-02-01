@@ -13,6 +13,8 @@ enum MovementState {
 	DASHING
 }
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -48,7 +50,3 @@ func _process(delta: float) -> void:
 			play("move_right")
 		else:
 			play("idle_right")
-
-		
-	#if not Input.is_action_pressed("ui_down") && not Input.is_action_pressed("ui_up") && not Input.is_action_pressed("ui_left") && not Input.is_action_pressed("ui_right"):
-		#stop() 
