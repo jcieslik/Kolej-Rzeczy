@@ -264,7 +264,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Scene_Rat" type="Node2D"]
 
 [node name="Obj_Mikol" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(160, 120)
