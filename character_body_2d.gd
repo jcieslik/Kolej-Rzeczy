@@ -14,7 +14,7 @@ var dash_delay = 0.0
 var dash_max_delay = 0.36 # delay between dashes
 
 var damage_delay = 0.0
-var damage_max_delay = 0.5
+var damage_max_delay = 1.5
 var was_damaged = false
 
 func _physics_process(delta: float) -> void:
@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 		damage_delay += delta
 		
 	if damage_delay > damage_max_delay:
+		damage_delay = 0.0
 		was_damaged = false
 
 	if !dash_started: 	

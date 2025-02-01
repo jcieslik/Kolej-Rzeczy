@@ -221,6 +221,7 @@ initial_velocity_max = 150.0
 gravity = Vector3(0, 98, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51jln"]
+size = Vector2(29, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gxowe"]
 atlas = ExtResource("14_7u1ts")
@@ -297,6 +298,7 @@ position = Vector2(96, 97)
 script = ExtResource("1_w6swb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.5, 2.5)
 shape = SubResource("RectangleShape2D_51jln")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
