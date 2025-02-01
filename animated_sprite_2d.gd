@@ -1,5 +1,17 @@
 extends AnimatedSprite2D
 
+enum PlayerDirection {
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT
+}
+
+enum MovementState {
+	IDLE,
+	RUNNING,
+	DASHING
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,10 +22,33 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-	if Input.is_action_pressed("ui_down"):
-		play("move_down")
-	if Input.is_action_pressed("ui_up"):
-		play("move_up")
+	var parent = get_parent()
+	
+	
+	if parent.current_direction == PlayerDirection.DOWN:
+		if parent.current_state == MovementState.RUNNING:
+			play("move_down")
+		else:
+			play("idle_down")
 		
-	if not Input.is_action_pressed("ui_down") && not Input.is_action_pressed("ui_up") && not Input.is_action_pressed("ui_left") && not Input.is_action_pressed("ui_right"):
-		stop() 
+	if parent.current_direction == PlayerDirection.UP:
+		if parent.current_state == MovementState.RUNNING:
+			play("move_up")
+		else:
+			play("idle_up")
+		
+	if parent.current_direction == PlayerDirection.LEFT:
+		if parent.current_state == MovementState.RUNNING:
+			play("move_left")
+		else:
+			play("idle_left")
+		
+	if parent.current_direction == PlayerDirection.RIGHT:
+		if parent.current_state == MovementState.RUNNING:
+			play("move_right")
+		else:
+			play("idle_right")
+
+		
+	#if not Input.is_action_pressed("ui_down") && not Input.is_action_pressed("ui_up") && not Input.is_action_pressed("ui_left") && not Input.is_action_pressed("ui_right"):
+		#stop() 
