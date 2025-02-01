@@ -1,15 +1,17 @@
 extends CharacterBody2D
 
 @export var speed: float = 200.0
-@export var min_dash_speed = 300.0
-@export var max_dash_speed = 500.0
+@export var min_dash_speed = 250.0
+@export var max_dash_speed = 450.0
 @export var current_direction: PlayerDirection = PlayerDirection.DOWN
 
 var current_state: MovementState = MovementState.IDLE
 
 var dash_started = false
 var dash_time = 0.0
-var dash_duration = 0.4 # Duration of whole dash
+var dash_duration = 0.18 # Duration of whole dash
+var dash_delay = 0.0
+var dash_max_delay = 0.36 # delay between dashes
 
 func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Vector2.ZERO
@@ -40,9 +42,10 @@ func _physics_process(delta: float) -> void:
 	if direction.length() > 0:
 		direction = direction.normalized()
 		
-	if Input.is_action_pressed("dash_action") and !dash_started:
+	if Input.is_action_pressed("dash_action") and !dash_started and dash_delay > dash_max_delay:
 		current_state = MovementState.DASHING
 		dash_time = 0.0
+		dash_delay = 0.0
 		dash_started = true
 
 	if dash_started:
@@ -62,7 +65,9 @@ func _physics_process(delta: float) -> void:
 		else:
 			dash_started = false
 			current_speed = speed
-
+	elif dash_delay < dash_max_delay:
+		dash_delay += delta
+		
 	velocity = direction * current_speed
 	
 	move_and_slide()
