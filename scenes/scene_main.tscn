@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://hgbjjpgiq5u"]
+[gd_scene load_steps=48 format=3 uid="uid://hgbjjpgiq5u"]
 
 [ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="1_ivbsa"]
 [ext_resource type="Texture2D" uid="uid://c2v6y333rmykh" path="res://Sprites/mikol_front_idle.png" id="2_5u6ul"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dyep5jwvgv3t4" path="res://wall.png" id="13_c7kif"]
 [ext_resource type="Texture2D" uid="uid://dm8c4711e7cy7" path="res://Sprites/king.png" id="14_ddvc1"]
 [ext_resource type="Texture2D" uid="uid://bg1bf1rnmp2rk" path="res://Sprites/maczeta/maczeta_sheet.png" id="14_wurlq"]
+[ext_resource type="PackedScene" uid="uid://bsq8ahrdvlv7d" path="res://scenes/scene_citizen.tscn" id="17_vmkiu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjeav"]
 size = Vector2(32, 32)
@@ -322,3 +323,9 @@ offset_top = -12.0
 offset_right = 21.0
 offset_bottom = 11.0
 text = "KING"
+
+[node name="scene_ludek" parent="." instance=ExtResource("17_vmkiu")]
+position = Vector2(215, 19)
+
+[node name="scene_ludek2" parent="." instance=ExtResource("17_vmkiu")]
+position = Vector2(-3, 161)
