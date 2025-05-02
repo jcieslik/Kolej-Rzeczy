@@ -1,6 +1,6 @@
-[gd_scene load_steps=48 format=3 uid="uid://hgbjjpgiq5u"]
+[gd_scene load_steps=47 format=3 uid="uid://hgbjjpgiq5u"]
 
-[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="1_ivbsa"]
+[ext_resource type="Script" uid="uid://bkhkue18jm2wq" path="res://Scripts/character_body_2d.gd" id="1_ivbsa"]
 [ext_resource type="Texture2D" uid="uid://c2v6y333rmykh" path="res://Sprites/mikol_front_idle.png" id="2_5u6ul"]
 [ext_resource type="Texture2D" uid="uid://db244fphbprjx" path="res://Sprites/mikol_left_idle.png" id="3_24j0e"]
 [ext_resource type="Texture2D" uid="uid://ewk5lfau2y44" path="res://Sprites/mikol_right_idle.png" id="4_t00bw"]
@@ -9,14 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://c4h4d8o6u8rs" path="res://Sprites/mikol_left.png" id="7_v08xj"]
 [ext_resource type="Texture2D" uid="uid://dkhwec1vg55y3" path="res://Sprites/mikol_right.png" id="8_g1ku2"]
 [ext_resource type="Texture2D" uid="uid://dnngd7y4feyai" path="res://Sprites/mikol_back_sheet.png" id="9_1twd8"]
-[ext_resource type="Script" path="res://Scripts/animated_sprite_2d.gd" id="10_r7f5t"]
+[ext_resource type="Script" uid="uid://tkeq5d7hbspv" path="res://Scripts/animated_sprite_2d.gd" id="10_r7f5t"]
 [ext_resource type="Texture2D" uid="uid://dpudv1xt0crmy" path="res://Sprites/partikiel.png" id="11_41hh5"]
-[ext_resource type="Script" path="res://gpu_particles_2d.gd" id="12_hx611"]
-[ext_resource type="Script" path="res://scenes/collision_shape_2d_2.gd" id="13_2fsd6"]
+[ext_resource type="Script" uid="uid://kg078asl2dhu" path="res://gpu_particles_2d.gd" id="12_hx611"]
+[ext_resource type="Script" uid="uid://4haei0cxgjjw" path="res://scenes/collision_shape_2d_2.gd" id="13_2fsd6"]
 [ext_resource type="Texture2D" uid="uid://dyep5jwvgv3t4" path="res://wall.png" id="13_c7kif"]
 [ext_resource type="Texture2D" uid="uid://dm8c4711e7cy7" path="res://Sprites/king.png" id="14_ddvc1"]
 [ext_resource type="Texture2D" uid="uid://bg1bf1rnmp2rk" path="res://Sprites/maczeta/maczeta_sheet.png" id="14_wurlq"]
-[ext_resource type="PackedScene" uid="uid://bsq8ahrdvlv7d" path="res://scenes/scene_citizen.tscn" id="17_vmkiu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjeav"]
 size = Vector2(32, 32)
@@ -280,12 +279,12 @@ script = ExtResource("10_r7f5t")
 show_behind_parent = true
 emitting = false
 amount = 6
-process_material = SubResource("ParticleProcessMaterial_xyhgh")
 texture = ExtResource("11_41hh5")
 lifetime = 0.3
 explosiveness = 0.8
 randomness = 0.05
 trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_xyhgh")
 script = ExtResource("12_hx611")
 
 [node name="Camera2D" type="Camera2D" parent="Obj_Mikol"]
@@ -323,9 +322,3 @@ offset_top = -12.0
 offset_right = 21.0
 offset_bottom = 11.0
 text = "KING"
-
-[node name="scene_ludek" parent="." instance=ExtResource("17_vmkiu")]
-position = Vector2(215, 19)
-
-[node name="scene_ludek2" parent="." instance=ExtResource("17_vmkiu")]
-position = Vector2(-3, 161)
