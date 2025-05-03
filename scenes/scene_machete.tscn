@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cm672qg8aar8e"]
 
 [ext_resource type="Script" uid="uid://buid13lodmmwc" path="res://Scripts/obj_machete.gd" id="1_yus6t"]
-[ext_resource type="Texture2D" uid="uid://bg1bf1rnmp2rk" path="res://Scripts/maczeta/maczeta_sheet.png" id="2_quw47"]
+[ext_resource type="Texture2D" uid="uid://bg1bf1rnmp2rk" path="res://Sprites/maczeta/maczeta_sheet.png" id="2_quw47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yus6t"]
 size = Vector2(32, 16)
@@ -32,10 +32,10 @@ animations = [{
 }],
 "loop": false,
 "name": &"slash",
-"speed": 5.0
+"speed": 10.0
 }]
 
-[node name="Obj_Machete" type="CharacterBody2D"]
+[node name="Obj_Machete" type="Area2D"]
 script = ExtResource("1_yus6t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -46,4 +46,5 @@ debug_color = Color(1, 1, 1, 0)
 sprite_frames = SubResource("SpriteFrames_quw47")
 animation = &"slash"
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
