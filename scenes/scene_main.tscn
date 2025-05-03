@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://hgbjjpgiq5u"]
+[gd_scene load_steps=13 format=4 uid="uid://hgbjjpgiq5u"]
 
 [ext_resource type="PackedScene" uid="uid://djbuyj004b8ui" path="res://scenes/obj_mikol.tscn" id="2_1o4gp"]
 [ext_resource type="Texture2D" uid="uid://d3yp8ww4itvkx" path="res://Sprites/shadowthehedgehog.png" id="2_7y7v8"]
 [ext_resource type="Texture2D" uid="uid://bqx4vm7uwtms1" path="res://Sprites/tileset1B.png" id="4_qt18x"]
 [ext_resource type="PackedScene" uid="uid://711qjs4tgsm4" path="res://scenes/obj_rat.tscn" id="5_xn7e6"]
+[ext_resource type="PackedScene" uid="uid://brcbjg1do0hyk" path="res://scenes/obj_olsztyniak_1.tscn" id="6_yvsxh"]
 [ext_resource type="Texture2D" uid="uid://cgr7xc0f3klub" path="res://Sprites/tileset1A.png" id="15_aa4c5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qt18x"]
@@ -108,6 +109,7 @@ sources/1 = SubResource("TileSetAtlasSource_xn7e6")
 
 [node name="Obj_Mikol" parent="." instance=ExtResource("2_1o4gp")]
 position = Vector2(587, 574)
+collision_mask = 15
 
 [node name="Scene_Tiles" type="Node2D" parent="."]
 position = Vector2(-1, -3)
@@ -130,3 +132,6 @@ position = Vector2(220, 87)
 
 [node name="Obj_Rat2" parent="." instance=ExtResource("5_xn7e6")]
 position = Vector2(1198, 439)
+
+[node name="citizen" parent="." instance=ExtResource("6_yvsxh")]
+position = Vector2(575, 76)

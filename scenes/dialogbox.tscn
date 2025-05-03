@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://bevi30ubxjs5k"]
 
-[ext_resource type="Script" uid="uid://dkhc4fusxs350" path="res://dialogues/Dialogue.gd" id="1_qelox"]
+[ext_resource type="Script" uid="uid://dkhc4fusxs350" path="res://Scripts/dialogue.gd" id="1_qelox"]
 [ext_resource type="Texture2D" uid="uid://y3fr38ghpmub" path="res://Sprites/dialogbox.png" id="2_0vat6"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Dialogue" type="CanvasLayer"]
 script = ExtResource("1_qelox")
 dialogue_file = "res://dialogues/json/olsztyniak_1.json"
 

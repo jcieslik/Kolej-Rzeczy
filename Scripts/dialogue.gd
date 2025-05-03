@@ -9,17 +9,20 @@ var dialogue_active = false
 
 func _ready():
 	$TextureRect.visible = false
-	start()
 	
-	$TextureRect/type.text = dialogue[0]["type"]
-	$TextureRect/text.text = dialogue[0]["text"]
 	
 func start():
 	if dialogue_active:
 		return
-	dialogue_active = true
-	$TextureRect.visible = true
+	
 	dialogue = load_dialogue()
+	if dialogue == null or dialogue.is_empty():
+		return
+		
+	dialogue_active = true
+	$TextureRect.visible = true		
+	$TextureRect/type.text = dialogue[0]["type"]
+	$TextureRect/text.text = dialogue[0]["text"]
 	
 func load_dialogue():
 	if FileAccess.file_exists(dialogue_file):
