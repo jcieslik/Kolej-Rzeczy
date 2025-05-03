@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://brcbjg1do0hyk"]
+
+[ext_resource type="Script" uid="uid://egrlc4eytwqc" path="res://Scripts/citizen.gd" id="1_coq3e"]
+[ext_resource type="Texture2D" uid="uid://b2scihr4r58af" path="res://Sprites/sadboi.jpg" id="2_xljht"]
+[ext_resource type="Script" uid="uid://c8d0byiy4asww" path="res://scenes/npc_dialogue.gd" id="3_00dcf"]
+[ext_resource type="PackedScene" uid="uid://bevi30ubxjs5k" path="res://scenes/dialogbox.tscn" id="4_obc61"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyaho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yd51f"]
+size = Vector2(54, 52)
+
+[node name="citizen" type="CharacterBody2D"]
+collision_mask = 8
+script = ExtResource("1_coq3e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dyaho")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xljht")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_00dcf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_yd51f")
+
+[node name="Dialogue" parent="." instance=ExtResource("4_obc61")]
