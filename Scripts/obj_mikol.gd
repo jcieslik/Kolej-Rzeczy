@@ -4,10 +4,12 @@ extends CharacterBody2D
 @export var min_dash_speed = 250.0
 @export var max_dash_speed = 450.0
 @export var current_direction: PlayerDirection = PlayerDirection.DOWN
+@export var machete_scene: PackedScene = preload("res://scenes/scene_machete.tscn")
 
 var current_state: MovementState = MovementState.IDLE
 
 var dash_started = false
+var attack_started = false
 var dash_time = 0.0
 var dash_duration = 0.18 # Duration of whole dash
 var dash_delay = 0.0
@@ -16,7 +18,7 @@ var dash_max_delay = 0.36 # delay between dashes
 var damage_delay = 0.0
 var damage_max_delay = 1.5
 var was_damaged = false
-
+		
 func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Vector2.ZERO
 	var current_speed = speed
@@ -29,8 +31,11 @@ func _physics_process(delta: float) -> void:
 	if damage_delay > damage_max_delay:
 		damage_delay = 0.0
 		was_damaged = false
-
-	if !dash_started: 	
+	
+	if Input.is_action_pressed("action") and !attack_started: 
+		slash()
+	
+	if !dash_started and !attack_started: 	
 		if Input.is_action_pressed("ui_right"):
 			direction.x += 1 
 			current_state = MovementState.RUNNING
@@ -53,7 +58,7 @@ func _physics_process(delta: float) -> void:
 	if direction.length() > 0:
 		direction = direction.normalized()
 		
-	if Input.is_action_pressed("dash_action") and !dash_started and dash_delay > dash_max_delay:
+	if Input.is_action_pressed("dash_action") and !dash_started and !attack_started and dash_delay > dash_max_delay:
 		current_state = MovementState.DASHING
 		dash_time = 0.0
 		dash_delay = 0.0
@@ -89,9 +94,34 @@ func apply_impulse(force: Vector2) -> void:
 		velocity += force
 		was_damaged = true
 		move_and_slide()
+		
+func slash():
+	attack_started = true
+	
+	var machete = machete_scene.instantiate()
+	get_parent().add_child(machete)
+	
+	machete.global_position = global_position + get_facing_offset(current_direction)
+	
+	machete.set_direction(current_direction)
+	
+	machete.visible = true
+	machete.play_animation()
+	
+func get_facing_offset(direction: PlayerDirection) -> Vector2:
+	match direction:
+		PlayerDirection.RIGHT:
+			return Vector2(24, 0)  
+		PlayerDirection.LEFT:
+			return Vector2(-24, 0)
+		PlayerDirection.UP:
+			return Vector2(0, -24)
+		PlayerDirection.DOWN:
+			return Vector2(0, 24)
+	return Vector2.ZERO
 
 enum MovementState {
-	IDLE,
+	IDLE,	
 	RUNNING,
 	DASHING
 }
