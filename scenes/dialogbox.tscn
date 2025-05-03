@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx3mjsy6b3v5b"]
+
+[ext_resource type="Texture2D" uid="uid://y3fr38ghpmub" path="res://Sprites/dialogbox.png" id="1_3g38f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3g38f"]
+size = Vector2(56, 20)
+
+[node name="Dialogbox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -263.0
+offset_top = -167.0
+offset_right = 307.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+texture = ExtResource("1_3g38f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(28, 438)
+shape = SubResource("RectangleShape2D_3g38f")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(610, 439)
+shape = SubResource("RectangleShape2D_3g38f")
