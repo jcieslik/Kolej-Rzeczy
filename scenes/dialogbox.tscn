@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://y3fr38ghpmub" path="res://Sprites/dialogbox.png" id="2_0vat6"]
 
 [node name="Dialogue" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_qelox")
 dialogue_file = "res://dialogues/json/olsztyniak_1.json"
 
