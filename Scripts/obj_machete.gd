@@ -9,7 +9,7 @@ var player: CharacterBody2D
 
 func _ready():	
 	player = get_parent().get_node("Obj_Mikol")
-	set_collision_layer_value(0, true)
+	set_collision_layer_value(32, true)
 	set_collision_mask_value(1, true)
 	collision_shape.set_deferred("disabled", true)
 
