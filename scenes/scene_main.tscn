@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=4 uid="uid://hgbjjpgiq5u"]
 
-[ext_resource type="PackedScene" path="res://scenes/obj_mikol.tscn" id="2_1o4gp"]
+[ext_resource type="PackedScene" uid="uid://bf21fnr0rv8o4" path="res://scenes/obj_mikol.tscn" id="2_1o4gp"]
 [ext_resource type="Texture2D" uid="uid://d3yp8ww4itvkx" path="res://Sprites/shadowthehedgehog.png" id="2_7y7v8"]
 [ext_resource type="Texture2D" uid="uid://bqx4vm7uwtms1" path="res://Sprites/tileset1B.png" id="4_qt18x"]
-[ext_resource type="Texture2D" uid="uid://cgr7xc0f3klub" path="res://Sprites/tileset1.png" id="15_aa4c5"]
+[ext_resource type="Texture2D" uid="uid://cgr7xc0f3klub" path="res://Sprites/tileset1A.png" id="15_aa4c5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qt18x"]
 resource_name = "Til_Shad"
@@ -41,9 +41,12 @@ sources/0 = SubResource("TileSetAtlasSource_h41w6")
 texture = ExtResource("4_qt18x")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/z_index = -1
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:0/0 = 0
+1:0/0/z_index = -1
 2:0/0 = 0
+2:0/0/z_index = -1
 3:0/0 = 0
 3:0/0/z_index = 2
 4:0/0 = 0
@@ -51,14 +54,16 @@ texture_region_size = Vector2i(32, 32)
 5:0/0 = 0
 5:0/0/z_index = 2
 0:1/0 = 0
+0:1/0/z_index = -1
 1:1/0 = 0
+1:1/0/z_index = -1
 2:1/0 = 0
+2:1/0/z_index = -1
 3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.03068, -16, 16, -16, 16, 16, -3.50494, 16)
 4:1/0 = 0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 5:1/0 = 0
-5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.71087, -16, 16, -16, 16, 16, -7.36037, 16)
 3:2/0 = 0
 3:2/0/z_index = 2
 4:2/0 = 0
@@ -77,6 +82,15 @@ texture_region_size = Vector2i(32, 32)
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 5:4/0 = 0
 5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/z_index = -1
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.92772, -10.1643, 16, -10.1643, 16, 8.93759, -1.92772, 9.28809)
+1:2/0 = 0
+1:2/0/z_index = -1
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -10.6901, 16, -10.3396, 16, 9.46333, -16, 9.63858)
+2:2/0 = 0
+2:2/0/z_index = -1
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -10.5148, 2.10296, -9.98907, 2.10296, 9.11284, -16, 9.28809)
 
 [sub_resource type="TileSet" id="TileSet_yvsxh"]
 tile_size = Vector2i(32, 32)
@@ -100,4 +114,5 @@ tile_map_data = PackedByteArray("AAACAAMAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAA
 tile_set = SubResource("TileSet_yl1re")
 
 [node name="Til_SetB" type="TileMapLayer" parent="Scene_Tiles"]
+tile_map_data = PackedByteArray("AAAJAAYAAQADAAIAAAAJAAcAAQADAAMAAAAJAAgAAQADAAQAAAAKAAYAAQAEAAIAAAAKAAcAAQAEAAMAAAAKAAgAAQAEAAQAAAALAAYAAQAFAAIAAAALAAcAAQAFAAMAAAALAAgAAQAFAAQAAAABAAMAAQADAAAAAAABAAQAAQADAAEAAAACAAMAAQAEAAAAAAACAAQAAQAEAAEAAAADAAMAAQAFAAAAAAADAAQAAQAFAAEAAAAQAP//AQAAAAAAAAATAP//AQAAAAAAAAAjAAIAAQAAAAAAAAAiAAIAAQACAAAAAAAPAAsAAQACAAAAAAAKAP7/AQACAAAAAAAJAAIAAQABAAAAAAAGAAQAAQABAAAAAAATAAkAAQABAAAAAAAlAAMAAQABAAAAAAAlAAQAAQACAAEAAAAdAAgAAQABAAAAAAAZAAIAAQABAAEAAAASAAEAAQABAAEAAAAEAAgAAQABAAEAAAACAAIAAQABAAEAAAAQAAkAAQAAAAEAAAAVAA0AAQAAAAEAAAAeAAEAAQAAAAEAAAAPAAQAAQACAAEAAAAJAAAAAQAAAAIAAAAKAAAAAQABAAIAAAALAAAAAQACAAIAAAABAAAAAQAAAAIAAAACAAAAAQABAAIAAAADAAAAAQACAAIAAAAaAAEAAQAAAAIAAAAbAAEAAQABAAIAAAAcAAEAAQACAAIAAAANAAgAAQAAAAIAAAAOAAgAAQABAAIAAAAPAAgAAQACAAIAAAAUAAgAAQAAAAIAAAAVAAgAAQABAAIAAAAWAAgAAQACAAIAAAAFAP//AQAAAAAAAAA=")
 tile_set = SubResource("TileSet_yvsxh")
