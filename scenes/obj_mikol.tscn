@@ -1,6 +1,6 @@
-[gd_scene load_steps=36 format=3 uid="uid://djbuyj004b8ui"]
+[gd_scene load_steps=36 format=3 uid="uid://bf21fnr0rv8o4"]
 
-[ext_resource type="Script" uid="uid://bkhkue18jm2wq" path="res://Scripts/obj_mikol.gd" id="1_x0mjh"]
+[ext_resource type="Script" uid="uid://bkhkue18jm2wq" path="res://Scripts/character_body_2d.gd" id="1_x0mjh"]
 [ext_resource type="Texture2D" uid="uid://c2v6y333rmykh" path="res://Sprites/mikol_front_idle.png" id="2_5nbmw"]
 [ext_resource type="Texture2D" uid="uid://db244fphbprjx" path="res://Sprites/mikol_left_idle.png" id="3_455wj"]
 [ext_resource type="Texture2D" uid="uid://ewk5lfau2y44" path="res://Sprites/mikol_right_idle.png" id="4_ifos1"]

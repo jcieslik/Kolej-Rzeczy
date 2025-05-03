@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y3fr38ghpmub"
-path="res://.godot/imported/dialogbox.png-cc8f76b14e55452d00a86fd43d7358c2.ctex"
+uid="uid://cgr7xc0f3klub"
+path="res://.godot/imported/tileset1.png-b461a72e66269b1a71e6fe59d48ff52c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/dialogbox.png"
-dest_files=["res://.godot/imported/dialogbox.png-cc8f76b14e55452d00a86fd43d7358c2.ctex"]
+source_file="res://Sprites/tileset1.png"
+dest_files=["res://.godot/imported/tileset1.png-b461a72e66269b1a71e6fe59d48ff52c.ctex"]
 
 [params]
 

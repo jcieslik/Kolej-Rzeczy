@@ -32,10 +32,10 @@ animations = [{
 }],
 "loop": false,
 "name": &"slash",
-"speed": 10.0
+"speed": 5.0
 }]
 
-[node name="Obj_Machete" type="Area2D"]
+[node name="Obj_Machete" type="CharacterBody2D"]
 script = ExtResource("1_yus6t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -46,5 +46,4 @@ debug_color = Color(1, 1, 1, 0)
 sprite_frames = SubResource("SpriteFrames_quw47")
 animation = &"slash"
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

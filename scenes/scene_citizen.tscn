@@ -1,11 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://dslc37ihcfu14"]
+[gd_scene load_steps=4 format=3 uid="uid://bsq8ahrdvlv7d"]
 
-[ext_resource type="PackedScene" uid="uid://brcbjg1do0hyk" path="res://scenes/obj_olsztyniak_1.tscn" id="1_tow5v"]
+[ext_resource type="Texture2D" uid="uid://b2scihr4r58af" path="res://Sprites/sadboi.jpg" id="1_3xg5i"]
+[ext_resource type="Script" uid="uid://egrlc4eytwqc" path="res://Scripts/citizen.gd" id="1_vpe0a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyaho"]
 
 [node name="scene_ludek" type="Node2D"]
 
-[node name="citizen" parent="." instance=ExtResource("1_tow5v")]
+[node name="citizen" type="CharacterBody2D" parent="."]
+script = ExtResource("1_vpe0a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="citizen"]
+shape = SubResource("RectangleShape2D_dyaho")
+
+[node name="Sprite2D" type="Sprite2D" parent="citizen"]
+texture = ExtResource("1_3xg5i")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[connection signal="timeout" from="Timer" to="citizen" method="_on_timer_timeout"]

@@ -11,7 +11,7 @@ var current_state: MovementState = MovementState.IDLE
 var dash_started = false
 var attack_started = false
 var dash_time = 0.0
-var dash_duration = 0.18
+var dash_duration = 0.18 # Duration of whole dash
 var dash_delay = 0.0
 var dash_max_delay = 0.36 # delay between dashes
 
