@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cm672qg8aar8e"]
 
 [ext_resource type="Script" uid="uid://buid13lodmmwc" path="res://Scripts/obj_machete.gd" id="1_yus6t"]
-[ext_resource type="Texture2D" uid="uid://bg1bf1rnmp2rk" path="res://Sprites/maczeta/maczeta_sheet.png" id="2_quw47"]
+[ext_resource type="Texture2D" uid="uid://bg1bf1rnmp2rk" path="res://Scripts/maczeta/maczeta_sheet.png" id="2_quw47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yus6t"]
 size = Vector2(32, 16)
