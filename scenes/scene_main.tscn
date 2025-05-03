@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://hgbjjpgiq5u"]
 
-[ext_resource type="PackedScene" uid="uid://bf21fnr0rv8o4" path="res://scenes/obj_mikol.tscn" id="2_1o4gp"]
+[ext_resource type="PackedScene" path="res://scenes/obj_mikol.tscn" id="2_1o4gp"]
 [ext_resource type="Texture2D" uid="uid://d3yp8ww4itvkx" path="res://Sprites/shadowthehedgehog.png" id="2_7y7v8"]
 [ext_resource type="Texture2D" uid="uid://bqx4vm7uwtms1" path="res://Sprites/tileset1B.png" id="4_qt18x"]
 [ext_resource type="Texture2D" uid="uid://cgr7xc0f3klub" path="res://Sprites/tileset1.png" id="15_aa4c5"]
