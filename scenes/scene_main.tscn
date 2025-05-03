@@ -1,8 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://hgbjjpgiq5u"]
+[gd_scene load_steps=20 format=4 uid="uid://hgbjjpgiq5u"]
 
-[ext_resource type="PackedScene" uid="uid://bf21fnr0rv8o4" path="res://scenes/obj_mikol.tscn" id="2_1o4gp"]
+[ext_resource type="PackedScene" path="res://scenes/obj_mikol.tscn" id="2_1o4gp"]
 [ext_resource type="Texture2D" uid="uid://d3yp8ww4itvkx" path="res://Sprites/shadowthehedgehog.png" id="2_7y7v8"]
 [ext_resource type="Texture2D" uid="uid://bqx4vm7uwtms1" path="res://Sprites/tileset1B.png" id="4_qt18x"]
+[ext_resource type="Script" uid="uid://6ihs05e247x3" path="res://Scripts/rat_script.gd" id="5_uab3x"]
+[ext_resource type="Texture2D" uid="uid://bs6mbbo3vvemy" path="res://Sprites/rat_left_sheet.png" id="6_jr2ww"]
+[ext_resource type="Texture2D" uid="uid://0ybbo4yqu82d" path="res://Sprites/rat_right_sheet.png" id="7_qgwpc"]
 [ext_resource type="Texture2D" uid="uid://cgr7xc0f3klub" path="res://Sprites/tileset1A.png" id="15_aa4c5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qt18x"]
@@ -97,6 +100,50 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_xn7e6")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uab3x"]
+size = Vector2(29, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxowe"]
+atlas = ExtResource("6_jr2ww")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oiiwp"]
+atlas = ExtResource("6_jr2ww")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0rqy"]
+atlas = ExtResource("7_qgwpc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yf2g"]
+atlas = ExtResource("7_qgwpc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jr2ww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxowe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiiwp")
+}],
+"loop": true,
+"name": &"rat_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0rqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yf2g")
+}],
+"loop": true,
+"name": &"rat_right",
+"speed": 5.0
+}]
+
 [node name="Scene_Main" type="Node2D"]
 
 [node name="Obj_Mikol" parent="." instance=ExtResource("2_1o4gp")]
@@ -116,3 +163,16 @@ tile_set = SubResource("TileSet_yl1re")
 [node name="Til_SetB" type="TileMapLayer" parent="Scene_Tiles"]
 tile_map_data = PackedByteArray("AAAJAAYAAQADAAIAAAAJAAcAAQADAAMAAAAJAAgAAQADAAQAAAAKAAYAAQAEAAIAAAAKAAcAAQAEAAMAAAAKAAgAAQAEAAQAAAALAAYAAQAFAAIAAAALAAcAAQAFAAMAAAALAAgAAQAFAAQAAAABAAMAAQADAAAAAAABAAQAAQADAAEAAAACAAMAAQAEAAAAAAACAAQAAQAEAAEAAAADAAMAAQAFAAAAAAADAAQAAQAFAAEAAAAQAP//AQAAAAAAAAATAP//AQAAAAAAAAAjAAIAAQAAAAAAAAAiAAIAAQACAAAAAAAPAAsAAQACAAAAAAAKAP7/AQACAAAAAAAJAAIAAQABAAAAAAAGAAQAAQABAAAAAAATAAkAAQABAAAAAAAlAAMAAQABAAAAAAAlAAQAAQACAAEAAAAdAAgAAQABAAAAAAAZAAIAAQABAAEAAAASAAEAAQABAAEAAAAEAAgAAQABAAEAAAACAAIAAQABAAEAAAAQAAkAAQAAAAEAAAAVAA0AAQAAAAEAAAAeAAEAAQAAAAEAAAAPAAQAAQACAAEAAAAJAAAAAQAAAAIAAAAKAAAAAQABAAIAAAALAAAAAQACAAIAAAABAAAAAQAAAAIAAAACAAAAAQABAAIAAAADAAAAAQACAAIAAAAaAAEAAQAAAAIAAAAbAAEAAQABAAIAAAAcAAEAAQACAAIAAAANAAgAAQAAAAIAAAAOAAgAAQABAAIAAAAPAAgAAQACAAIAAAAUAAgAAQAAAAIAAAAVAAgAAQABAAIAAAAWAAgAAQACAAIAAAAFAP//AQAAAAAAAAA=")
 tile_set = SubResource("TileSet_yvsxh")
+
+[node name="Obj_Rat" type="CharacterBody2D" parent="."]
+position = Vector2(96, 97)
+script = ExtResource("5_uab3x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obj_Rat"]
+physics_interpolation_mode = 1
+position = Vector2(-0.5, 2.5)
+shape = SubResource("RectangleShape2D_uab3x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Obj_Rat"]
+sprite_frames = SubResource("SpriteFrames_jr2ww")
+animation = &"rat_left"
