@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://hgbjjpgiq5u"]
+[gd_scene load_steps=40 format=3 uid="uid://hgbjjpgiq5u"]
 
 [ext_resource type="Script" uid="uid://bkhkue18jm2wq" path="res://Scripts/character_body_2d.gd" id="1_ivbsa"]
 [ext_resource type="Texture2D" uid="uid://c2v6y333rmykh" path="res://Sprites/mikol_front_idle.png" id="2_5u6ul"]
@@ -12,10 +12,8 @@
 [ext_resource type="Script" uid="uid://tkeq5d7hbspv" path="res://Scripts/animated_sprite_2d.gd" id="10_r7f5t"]
 [ext_resource type="Texture2D" uid="uid://dpudv1xt0crmy" path="res://Sprites/partikiel.png" id="11_41hh5"]
 [ext_resource type="Script" uid="uid://kg078asl2dhu" path="res://gpu_particles_2d.gd" id="12_hx611"]
-[ext_resource type="Script" uid="uid://4haei0cxgjjw" path="res://scenes/collision_shape_2d_2.gd" id="13_2fsd6"]
 [ext_resource type="Texture2D" uid="uid://dyep5jwvgv3t4" path="res://wall.png" id="13_c7kif"]
 [ext_resource type="Texture2D" uid="uid://dm8c4711e7cy7" path="res://Sprites/king.png" id="14_ddvc1"]
-[ext_resource type="Texture2D" uid="uid://bg1bf1rnmp2rk" path="res://Sprites/maczeta/maczeta_sheet.png" id="14_wurlq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjeav"]
 size = Vector2(32, 32)
@@ -221,38 +219,6 @@ spread = 100.0
 initial_velocity_max = 150.0
 gravity = Vector3(0, 98, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_irk57"]
-size = Vector2(32, 14.5)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tt17r"]
-atlas = ExtResource("14_wurlq")
-region = Rect2(0, 0, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jwrjm"]
-atlas = ExtResource("14_wurlq")
-region = Rect2(32, 0, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8d1ro"]
-atlas = ExtResource("14_wurlq")
-region = Rect2(64, 0, 32, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ldp0p"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tt17r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jwrjm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8d1ro")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mv63d"]
 size = Vector2(32, 29)
 
@@ -288,15 +254,6 @@ process_material = SubResource("ParticleProcessMaterial_xyhgh")
 script = ExtResource("12_hx611")
 
 [node name="Camera2D" type="Camera2D" parent="Obj_Mikol"]
-
-[node name="Maczeta_Collision" type="CollisionShape2D" parent="Obj_Mikol"]
-position = Vector2(0, 23.75)
-shape = SubResource("RectangleShape2D_irk57")
-script = ExtResource("13_2fsd6")
-
-[node name="Maczeta_Sprite" type="AnimatedSprite2D" parent="Obj_Mikol/Maczeta_Collision"]
-position = Vector2(0, -0.75)
-sprite_frames = SubResource("SpriteFrames_ldp0p")
 
 [node name="Obj_Wall" type="StaticBody2D" parent="." groups=["wall"]]
 position = Vector2(177, 94)
