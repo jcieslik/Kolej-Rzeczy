@@ -3,11 +3,23 @@ extends CharacterBody2D
 @export var speed: float = 100.0
 @export var push_force: float = 2000.0
 var player = null
+var lives = 2
+var iframeDuration = 0.5
+var iframe = 0.0
+var took_damage = false
+
+@onready var animated_sprite = $AnimatedSprite2D  # Referencing the AnimatedSprite2D node
 
 func _ready():
 	player = get_tree().get_first_node_in_group("player")
 
 func _physics_process(delta):
+	if took_damage: 
+		iframe += delta
+	if iframe >= iframeDuration:
+		took_damage = false
+	if lives < 1:
+		queue_free()
 	if player:
 		var distance = global_position.distance_to(player.global_position)
 		
@@ -22,3 +34,40 @@ func _physics_process(delta):
 					var applied = player.apply_impulse(push_direction * push_force)
 		else:
 			velocity = Vector2.ZERO
+			
+func take_damage(attack_direction: PlayerDirection):
+	if !took_damage:
+		lives -= 1
+		took_damage = true
+		
+		var push_force = 500
+		var direction = Vector2.ZERO
+		
+		match attack_direction:
+			PlayerDirection.UP:
+				direction = Vector2(0, -1)
+			PlayerDirection.DOWN:
+				direction = Vector2(0, 1)
+			PlayerDirection.LEFT:
+				direction = Vector2(-1, 0)
+			PlayerDirection.RIGHT:
+				direction = Vector2(1, 0)
+		
+		velocity = direction * -push_force
+		
+		var flash_duration = iframeDuration
+		var flash_interval = 0.02
+		var flashes = flash_duration / flash_interval
+		
+		for i in range(flashes):
+			animated_sprite.visible = !animated_sprite.visible
+			await get_tree().create_timer(flash_interval).timeout
+		
+		animated_sprite.visible = true
+
+enum PlayerDirection {
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT
+}
