@@ -18,6 +18,7 @@ var dash_max_delay = 0.36 # delay between dashes
 var damage_delay = 0.0
 var damage_max_delay = 1.5
 var was_damaged = false
+var health = 6
 		
 func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Vector2.ZERO

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://821gwwtyt0pn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_of32t"]
+load_path = "res://.godot/imported/hapec.png-9d9b8f95c71b4ab50346dedf6fb5a01c.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmmdq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_of32t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Obj_HealthUI❤" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dmmdq")

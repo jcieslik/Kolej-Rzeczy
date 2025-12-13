@@ -226,8 +226,7 @@ shape = SubResource("RectangleShape2D_cjeav")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ma11h")
-animation = &"idle_down"
-autoplay = "move_down"
+animation = &"move_down"
 script = ExtResource("10_i8hud")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
