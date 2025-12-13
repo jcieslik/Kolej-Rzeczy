@@ -17,7 +17,7 @@ var dash_delay = 0.0
 var dash_max_delay = 0.36 # delay between dashes
 
 var damage_delay = 0.0
-var damage_max_delay = 1.5
+var damage_max_delay = 1.0
 var was_damaged = false
 var health = 6
 		
