@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db244fphbprjx"
-path="res://.godot/imported/mikol_left_idle.png-c1b60c6e8811a3ab9845214f8c8a12e7.ctex"
+uid="uid://c2v6y333rmykh"
+path="res://.godot/imported/mikol_front_idle.png-fdf43d6761d0feb2365fd154087db228.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/mikol_left_idle.png"
-dest_files=["res://.godot/imported/mikol_left_idle.png-c1b60c6e8811a3ab9845214f8c8a12e7.ctex"]
+source_file="res://Sprites/mikol/mikol_front_idle.png"
+dest_files=["res://.godot/imported/mikol_front_idle.png-fdf43d6761d0feb2365fd154087db228.ctex"]
 
 [params]
 

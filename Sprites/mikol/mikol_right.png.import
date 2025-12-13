@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnngd7y4feyai"
-path="res://.godot/imported/mikol_back_sheet.png-a19edb84eb48148d815405b52e15fb3f.ctex"
+uid="uid://dkhwec1vg55y3"
+path="res://.godot/imported/mikol_right.png-7b34c9ffad176d5962b7610504674e91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/mikol_back_sheet.png"
-dest_files=["res://.godot/imported/mikol_back_sheet.png-a19edb84eb48148d815405b52e15fb3f.ctex"]
+source_file="res://Sprites/mikol/mikol_right.png"
+dest_files=["res://.godot/imported/mikol_right.png-7b34c9ffad176d5962b7610504674e91.ctex"]
 
 [params]
 
