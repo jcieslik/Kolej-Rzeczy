@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://pbjrvvjtxk5q" path="res://Sprites/healthui/hp_2.png" id="5_e482u"]
 [ext_resource type="Texture2D" uid="uid://2fw57ww3er0h" path="res://Sprites/healthui/hp_2.5.png" id="6_554wo"]
 [ext_resource type="Texture2D" uid="uid://dpv3hiuvbhdhu" path="res://Sprites/healthui/hp_3.png" id="7_i6nj4"]
-[ext_resource type="Script" uid="uid://dapguqwhb7nxl" path="res://scripts/animated_sprites/obj_healthui.gd" id="7_uxq2q"]
+[ext_resource type="Script" uid="uid://dapguqwhb7nxl" path="res://Scripts/animated_sprites/obj_healthui.gd" id="7_uxq2q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dmmdq"]
 animations = [{

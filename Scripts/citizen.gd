@@ -4,13 +4,16 @@ extends CharacterBody2D
 @export var moving = false
 
 
+
 func _process(_delta: float) -> void:
 	move_and_slide()
+	
 
-
+# funkcja nie dziala nie widzi timera
 func _on_timer_timeout() -> void:
 	var direction
 	moving = !moving
+	print(moving)
 	if moving:
 		var rand = randi()%8
 		match rand:
