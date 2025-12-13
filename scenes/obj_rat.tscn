@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://711qjs4tgsm4"]
+[gd_scene load_steps=10 format=3 uid="uid://jy5ooa22ue71"]
 
-[ext_resource type="Script" uid="uid://6ihs05e247x3" path="res://Scripts/objects_scripts/obj_rat.gd" id="1_nxcyv"]
+[ext_resource type="Script" uid="uid://6ihs05e247x3" path="res://Scripts/rat_script.gd" id="1_nxcyv"]
 [ext_resource type="Texture2D" uid="uid://bs6mbbo3vvemy" path="res://Sprites/rat_left_sheet.png" id="2_ctj12"]
 [ext_resource type="Texture2D" uid="uid://0ybbo4yqu82d" path="res://Sprites/rat_right_sheet.png" id="3_8gu88"]
 

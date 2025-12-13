@@ -1,20 +1,66 @@
-[gd_scene load_steps=3 format=3 uid="uid://821gwwtyt0pn"]
+[gd_scene load_steps=9 format=3 uid="uid://821gwwtyt0pn"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_of32t"]
-load_path = "res://.godot/imported/hapec.png-9d9b8f95c71b4ab50346dedf6fb5a01c.ctex"
+[ext_resource type="Texture2D" uid="uid://bwormnxar7251" path="res://Sprites/healthui/hp_0.5.png" id="2_vl4v0"]
+[ext_resource type="Texture2D" uid="uid://8udpggfroxqi" path="res://Sprites/healthui/hp_1.png" id="3_bm5hn"]
+[ext_resource type="Texture2D" uid="uid://3472hxtex4jd" path="res://Sprites/healthui/hp_1.5.png" id="4_utytp"]
+[ext_resource type="Texture2D" uid="uid://pbjrvvjtxk5q" path="res://Sprites/healthui/hp_2.png" id="5_e482u"]
+[ext_resource type="Texture2D" uid="uid://2fw57ww3er0h" path="res://Sprites/healthui/hp_2.5.png" id="6_554wo"]
+[ext_resource type="Texture2D" uid="uid://dpv3hiuvbhdhu" path="res://Sprites/healthui/hp_3.png" id="7_i6nj4"]
+[ext_resource type="Script" uid="uid://cs4oxe3tlja4w" path="res://scenes/animated_sprite_2d.gd" id="8_te8e0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dmmdq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_of32t")
+"texture": ExtResource("2_vl4v0")
 }],
 "loop": true,
-"name": &"default",
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bm5hn")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_utytp")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_e482u")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_554wo")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_i6nj4")
+}],
+"loop": true,
+"name": &"6",
 "speed": 5.0
 }]
 
 [node name="Obj_HealthUI❤" type="Control"]
+z_index = 666
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -22,3 +68,5 @@ offset_bottom = 40.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dmmdq")
+animation = &"6"
+script = ExtResource("8_te8e0")
