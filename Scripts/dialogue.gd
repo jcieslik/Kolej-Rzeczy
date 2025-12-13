@@ -1,7 +1,6 @@
 extends CanvasLayer
 
-@export_file("*.json")
-var dialogue_file: String
+@onready var dialogue_file:String = get_parent().dialogue_file
 
 var dialogue = []
 var current_dialogue_id = 0

@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 @export var speed = 80
 @export var moving = false
-
+@export_file("*.json")
+var dialogue_file: String
 
 
 func _process(_delta: float) -> void:

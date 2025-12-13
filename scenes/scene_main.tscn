@@ -199,8 +199,10 @@ position = Vector2(1198, 439)
 [node name="Obj_Rat3" parent="." instance=ExtResource("5_xn7e6")]
 position = Vector2(-115, 850)
 
-[node name="citizen" parent="." instance=ExtResource("6_yvsxh")]
-position = Vector2(572, 76)
-
 [node name="citizen2" parent="." instance=ExtResource("6_yvsxh")]
+position = Vector2(572, 76)
+dialogue_file = "res://dialogues/json/olsztyniak_2.json"
+
+[node name="citizen1" parent="." instance=ExtResource("6_yvsxh")]
 position = Vector2(581, 911)
+dialogue_file = "res://dialogues/json/olsztyniak_1.json"
