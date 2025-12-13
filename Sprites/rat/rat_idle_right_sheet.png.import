@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy2s2lokphrn3"
-path="res://.godot/imported/rat_right_sheet.png-6489dbb5f9e438cebff54a17d0c6e6ee.ctex"
+uid="uid://xow28lxng7ko"
+path="res://.godot/imported/rat_idle_right_sheet.png-4ae0717d0e161e1b877e69dd3344eb72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/rat/rat_right_sheet.png"
-dest_files=["res://.godot/imported/rat_right_sheet.png-6489dbb5f9e438cebff54a17d0c6e6ee.ctex"]
+source_file="res://Sprites/rat/rat_idle_right_sheet.png"
+dest_files=["res://.godot/imported/rat_idle_right_sheet.png-4ae0717d0e161e1b877e69dd3344eb72.ctex"]
 
 [params]
 
