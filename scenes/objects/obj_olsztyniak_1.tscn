@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://egrlc4eytwqc" path="res://Scripts/citizen.gd" id="1_coq3e"]
 [ext_resource type="Texture2D" uid="uid://b2scihr4r58af" path="res://Sprites/sadboi.jpg" id="2_xljht"]
-[ext_resource type="Script" uid="uid://c8d0byiy4asww" path="res://scenes/npc_dialogue.gd" id="3_00dcf"]
+[ext_resource type="Script" uid="uid://c8d0byiy4asww" path="res://Scripts/npc_dialogue.gd" id="3_00dcf"]
 [ext_resource type="PackedScene" uid="uid://bevi30ubxjs5k" path="res://scenes/dialogbox.tscn" id="4_obc61"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dyaho"]

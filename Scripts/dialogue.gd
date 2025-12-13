@@ -18,8 +18,9 @@ func start():
 		return
 		
 	dialogue_active = true
-	$TextureRect.visible = true		
-	$TextureRect/type.type = dialogue[current_dialogue_id]["type"]
+	$TextureRect.visible = true
+	current_dialogue_id = 0
+	$TextureRect/type.text = dialogue[current_dialogue_id]["type"]
 	$TextureRect/text.text = dialogue[current_dialogue_id]["text"]
 	
 func load_dialogue():
