@@ -37,19 +37,19 @@ func _physics_process(delta: float) -> void:
 		slash()
 	
 	if !dash_started and !attack_started: 	
-		if Input.is_action_pressed("ui_right"):
+		if Input.is_action_pressed("move_right"):
 			direction.x += 1 
 			current_state = MovementState.RUNNING
 			current_direction = PlayerDirection.RIGHT
-		if Input.is_action_pressed("ui_left"):
+		if Input.is_action_pressed("move_left"):
 			direction.x -= 1  
 			current_state = MovementState.RUNNING
 			current_direction = PlayerDirection.LEFT
-		if Input.is_action_pressed("ui_down"):
+		if Input.is_action_pressed("move_down"):
 			direction.y += 1  
 			current_state = MovementState.RUNNING
 			current_direction = PlayerDirection.DOWN
-		if Input.is_action_pressed("ui_up"):
+		if Input.is_action_pressed("move_up"):
 			direction.y -= 1  
 			current_state = MovementState.RUNNING
 			current_direction = PlayerDirection.UP
