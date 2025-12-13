@@ -7,22 +7,21 @@ var dialogue = []
 var current_dialogue_id = 0
 var dialogue_active = false
 
+@onready var textureRect = get_node("TextureRect")
+
 func _ready():
 	$TextureRect.visible = false
 	
-	
 func start():
-	if dialogue_active:
-		return
-	
 	dialogue = load_dialogue()
 	if dialogue == null or dialogue.is_empty():
 		return
 		
 	dialogue_active = true
-	$TextureRect.visible = true		
-	$TextureRect/type.text = dialogue[0]["type"]
-	$TextureRect/text.text = dialogue[0]["text"]
+	$TextureRect.visible = true
+	current_dialogue_id = 0
+	$TextureRect/type.text = dialogue[current_dialogue_id]["type"]
+	$TextureRect/text.text = dialogue[current_dialogue_id]["text"]
 	
 func load_dialogue():
 	if FileAccess.file_exists(dialogue_file):

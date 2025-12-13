@@ -1,24 +1,78 @@
-[gd_scene load_steps=7 format=3 uid="uid://brcbjg1do0hyk"]
+[gd_scene load_steps=15 format=3 uid="uid://brcbjg1do0hyk"]
 
 [ext_resource type="Script" uid="uid://egrlc4eytwqc" path="res://Scripts/citizen.gd" id="1_coq3e"]
-[ext_resource type="Texture2D" uid="uid://b2scihr4r58af" path="res://Sprites/sadboi.jpg" id="2_xljht"]
-[ext_resource type="Script" uid="uid://c8d0byiy4asww" path="res://scenes/npc_dialogue.gd" id="3_00dcf"]
+[ext_resource type="Script" uid="uid://c8d0byiy4asww" path="res://Scripts/npc_dialogue.gd" id="3_00dcf"]
+[ext_resource type="Texture2D" uid="uid://cp1fjret2y1yg" path="res://Sprites/olsztyniak_spritesheet.png" id="4_fmsc1"]
 [ext_resource type="PackedScene" uid="uid://bevi30ubxjs5k" path="res://scenes/dialogbox.tscn" id="4_obc61"]
+[ext_resource type="Texture2D" uid="uid://cfi8q0fkkr48p" path="res://Sprites/olsztyniak_spritesheet_right.png" id="5_b1jur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dyaho"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yd51f"]
 size = Vector2(54, 52)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dp4t"]
+atlas = ExtResource("4_fmsc1")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wehx1"]
+atlas = ExtResource("4_fmsc1")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scao2"]
+atlas = ExtResource("4_fmsc1")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8q5f"]
+atlas = ExtResource("5_b1jur")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_088a5"]
+atlas = ExtResource("5_b1jur")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd0oe"]
+atlas = ExtResource("5_b1jur")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ijtm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dp4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wehx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scao2")
+}],
+"loop": true,
+"name": &"olsztyniak_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8q5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_088a5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yd0oe")
+}],
+"loop": true,
+"name": &"olsztyniak_right",
+"speed": 5.0
+}]
+
 [node name="citizen" type="CharacterBody2D"]
 collision_mask = 8
 script = ExtResource("1_coq3e")
+moving = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dyaho")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_xljht")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("3_00dcf")
@@ -27,3 +81,11 @@ script = ExtResource("3_00dcf")
 shape = SubResource("RectangleShape2D_yd51f")
 
 [node name="Dialogue" parent="." instance=ExtResource("4_obc61")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3ijtm")
+animation = &"olsztyniak_left"
