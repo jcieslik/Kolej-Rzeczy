@@ -33,8 +33,10 @@ func _physics_process(delta):
 					var collider = collision.get_collider()
 					if collider == player:
 						var push_direction = (player.global_position - global_position).normalized()
+						if player.was_damaged == false:
+							player.health -= 1
 						player.apply_impulse(push_direction * push_force)
-						player.health -= 1
+						
 
 	if iframe >= iframeDuration:
 		took_damage = false

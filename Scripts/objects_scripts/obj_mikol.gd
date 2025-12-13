@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var current_direction: PlayerDirection = PlayerDirection.DOWN
 @export var machete_scene: PackedScene = preload("res://scenes/scene_machete.tscn")
 
+@onready var animated_sprite = $AnimatedSprite2D  # Referencing the AnimatedSprite2D node
 var current_state: MovementState = MovementState.IDLE
 
 var dash_started = false
@@ -98,6 +99,16 @@ func apply_impulse(force: Vector2) -> void:
 		velocity += force
 		was_damaged = true
 		move_and_slide()
+		
+		var flash_duration = damage_max_delay
+		var flash_interval = 0.02
+		var flashes = flash_duration / flash_interval
+		
+		for i in range(flashes):
+			animated_sprite.visible = !animated_sprite.visible
+			await get_tree().create_timer(flash_interval).timeout
+			
+		animated_sprite.visible = true
 		
 func slash():
 	attack_started = true

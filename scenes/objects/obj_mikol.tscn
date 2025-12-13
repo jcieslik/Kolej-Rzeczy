@@ -249,3 +249,5 @@ offset_left = -288.0
 offset_top = -223.0
 offset_right = -161.0
 offset_bottom = -80.0
+
+[node name="FlashTimer" type="Timer" parent="."]
