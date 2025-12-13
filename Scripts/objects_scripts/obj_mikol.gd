@@ -26,6 +26,9 @@ func _physics_process(delta: float) -> void:
 	
 	current_state = MovementState.IDLE
 	
+	if health < 0:
+		get_tree().quit()
+	
 	if was_damaged and damage_delay < damage_max_delay: 
 		damage_delay += delta
 		
