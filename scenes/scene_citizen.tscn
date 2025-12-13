@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dslc37ihcfu14"]
 
-[ext_resource type="PackedScene" uid="uid://brcbjg1do0hyk" path="res://scenes/obj_olsztyniak_1.tscn" id="1_tow5v"]
+[ext_resource type="PackedScene" uid="uid://brcbjg1do0hyk" path="res://scenes/objects/obj_olsztyniak_1.tscn" id="1_tow5v"]
 
 [node name="scene_ludek" type="Node2D"]
 

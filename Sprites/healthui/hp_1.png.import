@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy2s2lokphrn3"
-path="res://.godot/imported/rat_right_sheet.png-6489dbb5f9e438cebff54a17d0c6e6ee.ctex"
+uid="uid://8udpggfroxqi"
+path="res://.godot/imported/hp_1.png-b58d3559df758b1d6bec0887895e37ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/rat/rat_right_sheet.png"
-dest_files=["res://.godot/imported/rat_right_sheet.png-6489dbb5f9e438cebff54a17d0c6e6ee.ctex"]
+source_file="res://Sprites/healthui/hp_1.png"
+dest_files=["res://.godot/imported/hp_1.png-b58d3559df758b1d6bec0887895e37ec.ctex"]
 
 [params]
 

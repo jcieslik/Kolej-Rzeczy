@@ -221,12 +221,12 @@ gravity = Vector3(0, 98, 0)
 script = ExtResource("1_x0mjh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_cjeav")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ma11h")
-animation = &"idle_down"
-autoplay = "move_down"
+animation = &"move_down"
 script = ExtResource("10_i8hud")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
