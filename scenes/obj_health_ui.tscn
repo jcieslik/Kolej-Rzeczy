@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://821gwwtyt0pn"]
-
-[ext_resource type="Script" uid="uid://tkeq5d7hbspv" path="res://Scripts/animated_sprite_2d.gd" id="1_dmmdq"]
+[gd_scene load_steps=3 format=3 uid="uid://821gwwtyt0pn"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_of32t"]
+load_path = "res://.godot/imported/hapec.png-9d9b8f95c71b4ab50346dedf6fb5a01c.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dmmdq"]
 animations = [{
@@ -23,4 +22,3 @@ offset_bottom = 40.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dmmdq")
-script = ExtResource("1_dmmdq")
