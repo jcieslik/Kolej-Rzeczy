@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=4 uid="uid://hgbjjpgiq5u"]
+[gd_scene load_steps=14 format=4 uid="uid://hgbjjpgiq5u"]
 
 [ext_resource type="PackedScene" uid="uid://djbuyj004b8ui" path="res://scenes/objects/obj_mikol.tscn" id="2_1o4gp"]
 [ext_resource type="Texture2D" uid="uid://d3yp8ww4itvkx" path="res://Sprites/shadowthehedgehog.png" id="2_7y7v8"]
 [ext_resource type="Texture2D" uid="uid://bqx4vm7uwtms1" path="res://Sprites/tileset1B.png" id="4_qt18x"]
 [ext_resource type="PackedScene" uid="uid://711qjs4tgsm4" path="res://scenes/objects/obj_rat.tscn" id="5_xn7e6"]
 [ext_resource type="PackedScene" uid="uid://brcbjg1do0hyk" path="res://scenes/objects/obj_olsztyniak_1.tscn" id="6_yvsxh"]
+[ext_resource type="PackedScene" uid="uid://d0dl3eqefcjv0" path="res://scenes/objects/obj_heart_item.tscn" id="7_uab3x"]
 [ext_resource type="Texture2D" uid="uid://cgr7xc0f3klub" path="res://Sprites/tileset1A.png" id="15_aa4c5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qt18x"]
@@ -204,5 +205,11 @@ position = Vector2(572, 76)
 dialogue_file = "res://dialogues/json/olsztyniak_2.json"
 
 [node name="citizen1" parent="." instance=ExtResource("6_yvsxh")]
-position = Vector2(581, 911)
+position = Vector2(580, 927)
 dialogue_file = "res://dialogues/json/olsztyniak_1.json"
+
+[node name="Obj_HeartItem" parent="." instance=ExtResource("7_uab3x")]
+position = Vector2(1363, 109)
+
+[node name="Obj_HeartItem2" parent="." instance=ExtResource("7_uab3x")]
+position = Vector2(-433, 67)
