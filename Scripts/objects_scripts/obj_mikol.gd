@@ -63,7 +63,7 @@ func _physics_process(delta: float) -> void:
 	if direction.length() > 0:
 		direction = direction.normalized()
 		
-	if Input.is_action_pressed("dash_action") and !dash_started and !attack_started and dash_delay > dash_max_delay:
+	if Input.is_action_just_pressed("dash_action") and !dash_started and !attack_started and dash_delay > dash_max_delay:
 		current_state = MovementState.DASHING
 		dash_time = 0.0
 		dash_delay = 0.0
