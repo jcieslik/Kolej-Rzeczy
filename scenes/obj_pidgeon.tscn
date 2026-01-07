@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://l155epg8ol85"]
+
+[ext_resource type="Texture2D" uid="uid://cyb2ylklixynx" path="res://Sprites/pigon/pidgeon_placeholder_anim.png" id="1_ab6l7"]
+[ext_resource type="Script" uid="uid://gjl1ce84jibu" path="res://scenes/objects/obj_pidgeon.gd" id="1_ip4jn"]
+[ext_resource type="Texture2D" uid="uid://dgqairavmtplm" path="res://Sprites/pigon/pidgeon_placeholder.png" id="2_ip4jn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wv5v"]
+atlas = ExtResource("1_ab6l7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmnvu"]
+atlas = ExtResource("1_ab6l7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lm73d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wv5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmnvu")
+}],
+"loop": true,
+"name": &"pidgeon_fly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ip4jn")
+}],
+"loop": true,
+"name": &"pidgeon_idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip4jn"]
+
+[node name="Obj_Pidgeon" type="CharacterBody2D"]
+script = ExtResource("1_ip4jn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 100
+sprite_frames = SubResource("SpriteFrames_lm73d")
+animation = &"pidgeon_idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ip4jn")
+disabled = true
