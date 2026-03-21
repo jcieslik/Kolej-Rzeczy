@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://brcbjg1do0hyk"]
+[gd_scene format=3 uid="uid://brcbjg1do0hyk"]
 
 [ext_resource type="Script" uid="uid://egrlc4eytwqc" path="res://Scripts/citizen.gd" id="1_coq3e"]
 [ext_resource type="Script" uid="uid://c8d0byiy4asww" path="res://Scripts/npc_dialogue.gd" id="3_00dcf"]
@@ -66,26 +66,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="citizen" type="CharacterBody2D"]
+[node name="citizen" type="CharacterBody2D" unique_id=433397187]
 collision_mask = 8
 script = ExtResource("1_coq3e")
 moving = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2100693448]
 shape = SubResource("RectangleShape2D_dyaho")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=2103500212]
 script = ExtResource("3_00dcf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2054418429]
 shape = SubResource("RectangleShape2D_yd51f")
 
-[node name="Dialogue" parent="." instance=ExtResource("4_obc61")]
+[node name="Dialogue" parent="." unique_id=1874646908 instance=ExtResource("4_obc61")]
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1115417274]
 sprite_frames = SubResource("SpriteFrames_3ijtm")
 animation = &"olsztyniak_left"
+
+[node name="Timer" type="Timer" parent="." unique_id=1998895874]
