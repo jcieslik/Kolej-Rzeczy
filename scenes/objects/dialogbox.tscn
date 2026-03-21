@@ -1,17 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bevi30ubxjs5k"]
+[gd_scene format=3 uid="uid://bevi30ubxjs5k"]
 
 [ext_resource type="Script" uid="uid://dkhc4fusxs350" path="res://Scripts/dialogue.gd" id="1_qelox"]
 [ext_resource type="Texture2D" uid="uid://y3fr38ghpmub" path="res://Sprites/dialogbox.png" id="2_0vat6"]
 
-[node name="Dialogue" type="CanvasLayer"]
+[node name="Dialogue" type="CanvasLayer" unique_id=1377570255]
 script = ExtResource("1_qelox")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=825190137]
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_0vat6")
 
-[node name="type" type="RichTextLabel" parent="TextureRect"]
+[node name="type" type="RichTextLabel" parent="TextureRect" unique_id=1771703111]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 38.0
@@ -19,7 +19,7 @@ offset_right = 152.0
 offset_bottom = 78.0
 text = "Słowacki"
 
-[node name="peron" type="RichTextLabel" parent="TextureRect"]
+[node name="peron" type="RichTextLabel" parent="TextureRect" unique_id=1010397363]
 layout_mode = 0
 offset_left = 171.0
 offset_top = 38.0
@@ -27,7 +27,7 @@ offset_right = 211.0
 offset_bottom = 78.0
 text = "4"
 
-[node name="tor" type="RichTextLabel" parent="TextureRect"]
+[node name="tor" type="RichTextLabel" parent="TextureRect" unique_id=1882491478]
 layout_mode = 0
 offset_left = 256.0
 offset_top = 38.0
@@ -35,7 +35,7 @@ offset_right = 296.0
 offset_bottom = 78.0
 text = "2"
 
-[node name="delay" type="RichTextLabel" parent="TextureRect"]
+[node name="delay" type="RichTextLabel" parent="TextureRect" unique_id=1773030921]
 layout_mode = 0
 offset_left = 322.0
 offset_top = 38.0
@@ -43,7 +43,7 @@ offset_right = 453.0
 offset_bottom = 78.0
 text = "60 minut"
 
-[node name="text" type="RichTextLabel" parent="TextureRect"]
+[node name="text" type="RichTextLabel" parent="TextureRect" unique_id=1791804600]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 70.0
