@@ -236,3 +236,8 @@ dialogue_file = "res://dialogues/json/olsztyniak_2.json"
 [node name="citizen1" parent="Grp_Entities/Grp_NPC/Grp_Olsztynians" unique_id=1715141588 instance=ExtResource("7_qx1ny")]
 position = Vector2(580, 927)
 dialogue_file = "res://dialogues/json/olsztyniak_1.json"
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1088638634]
+
+[node name="start" type="Marker2D" parent="SpawnPoints" unique_id=478290309]
+position = Vector2(-272, 85)

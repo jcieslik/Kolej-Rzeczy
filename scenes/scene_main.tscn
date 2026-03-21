@@ -1,16 +1,13 @@
 [gd_scene format=3 uid="uid://hgbjjpgiq5u"]
 
+[ext_resource type="Script" uid="uid://b5t06gjv8d6dw" path="res://Scripts/objects_scripts/scene_main.gd" id="1_7y7v8"]
 [ext_resource type="PackedScene" uid="uid://djbuyj004b8ui" path="res://scenes/objects/obj_mikol.tscn" id="2_1o4gp"]
-[ext_resource type="PackedScene" uid="uid://ddgadlrl46j0s" path="res://scenes/levels/scene_dworzec.tscn" id="2_7y7v8"]
 
 [node name="Scene_Main" type="Node2D" unique_id=1251578821]
+script = ExtResource("1_7y7v8")
 
-[node name="Obj_Mikol" parent="." unique_id=58621823 instance=ExtResource("2_1o4gp")]
+[node name="Player" parent="." unique_id=58621823 instance=ExtResource("2_1o4gp")]
 position = Vector2(364, 983)
 collision_mask = 15
 
-[node name="Scene_Dworzec" parent="." unique_id=1371635475 instance=ExtResource("2_7y7v8")]
-
-[node name="Scene_Dworzec2" parent="." unique_id=1236731453 instance=ExtResource("2_7y7v8")]
-visible = false
-position = Vector2(1948, -1)
+[node name="LevelContainer" type="Node2D" parent="." unique_id=1764858769]
