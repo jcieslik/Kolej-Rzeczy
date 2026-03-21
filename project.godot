@@ -35,6 +35,11 @@ player_action=""
 player=""
 main=""
 
+[gui]
+
+theme/default_font_antialiasing=2
+theme/default_font_hinting=2
+
 [input]
 
 dash_action={

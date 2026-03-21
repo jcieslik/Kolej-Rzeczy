@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bqlalj2au4abq"]
+
+[ext_resource type="Script" uid="uid://c5xgbvolaukov" path="res://Scripts/objects_scripts/obj_pieniadze_ui.gd" id="1_7lscp"]
+[ext_resource type="Texture2D" uid="uid://d18yg0q0lvaiy" path="res://Sprites/grosz_sheet.png" id="2_r3wpt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ichct"]
+atlas = ExtResource("2_r3wpt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3h8sn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ichct")
+}],
+"loop": true,
+"name": &"coin_spin",
+"speed": 5.0
+}]
+
+[node name="ObjPieniadzeUi" type="Control" unique_id=329347953]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7lscp")
+
+[node name="Label" type="Label" parent="." unique_id=363159613]
+layout_mode = 0
+offset_left = 18.0
+offset_top = -12.0
+offset_right = 100.0
+offset_bottom = 11.0
+text = "PIENIADZE"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=279304442]
+position = Vector2(6, 0)
+sprite_frames = SubResource("SpriteFrames_3h8sn")
+animation = &"coin_spin"

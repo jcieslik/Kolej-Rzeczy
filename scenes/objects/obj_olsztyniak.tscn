@@ -100,6 +100,8 @@ script = ExtResource("3_00dcf")
 shape = SubResource("RectangleShape2D_yd51f")
 
 [node name="Dialogue" parent="." unique_id=1874646908 instance=ExtResource("4_obc61")]
+offset = Vector2(4, 320)
+transform = Transform2D(1, 0, 0, 1, 4, 320)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1115417274]
 sprite_frames = SubResource("SpriteFrames_3ijtm")

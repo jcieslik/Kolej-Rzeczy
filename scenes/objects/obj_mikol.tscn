@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dpudv1xt0crmy" path="res://Sprites/partikiel.png" id="11_5xxfr"]
 [ext_resource type="Script" uid="uid://kg078asl2dhu" path="res://gpu_particles_2d.gd" id="12_6o7fp"]
 [ext_resource type="PackedScene" uid="uid://821gwwtyt0pn" path="res://scenes/objects/obj_health_ui.tscn" id="13_u6cmi"]
+[ext_resource type="PackedScene" uid="uid://bqlalj2au4abq" path="res://scenes/objects/obj_pieniadze_ui.tscn" id="14_lmvbq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjeav"]
 size = Vector2(16, 16)
@@ -251,5 +252,12 @@ offset_left = -288.0
 offset_top = -223.0
 offset_right = -161.0
 offset_bottom = -80.0
+
+[node name="ObjPieniadzeUi" parent="Camera2D" unique_id=685222988 instance=ExtResource("14_lmvbq")]
+z_index = 3
+offset_left = -310.0
+offset_top = -204.0
+offset_right = -310.0
+offset_bottom = -204.0
 
 [node name="FlashTimer" type="Timer" parent="." unique_id=599695923]
