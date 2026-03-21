@@ -5,5 +5,5 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.is_in_group("player") && body.health < 6: 
-		body.health += 2
+		body.health = min(6, body.health + 2)
 		queue_free()
