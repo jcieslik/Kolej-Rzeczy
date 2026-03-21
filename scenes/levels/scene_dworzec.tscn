@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d0dl3eqefcjv0" path="res://scenes/objects/obj_heart_item.tscn" id="4_blgwp"]
 [ext_resource type="PackedScene" uid="uid://l155epg8ol85" path="res://scenes/objects/obj_pidgeon.tscn" id="5_invdy"]
 [ext_resource type="PackedScene" uid="uid://jy5ooa22ue71" path="res://scenes/objects/obj_rat.tscn" id="6_83xcs"]
-[ext_resource type="PackedScene" uid="uid://brcbjg1do0hyk" path="res://scenes/objects/obj_olsztyniak_1.tscn" id="7_qx1ny"]
+[ext_resource type="PackedScene" uid="uid://brcbjg1do0hyk" path="res://scenes/objects/obj_olsztyniak.tscn" id="7_qx1ny"]
+[ext_resource type="PackedScene" uid="uid://s6rqnbdh0aiy" path="res://scenes/objects/obj_entry.tscn" id="9_16yne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_613ia"]
 resource_name = "Til_Shad"
@@ -229,13 +230,18 @@ position = Vector2(-115, 850)
 
 [node name="Grp_Olsztynians" type="Node2D" parent="Grp_Entities/Grp_NPC" unique_id=1652063234]
 
-[node name="citizen2" parent="Grp_Entities/Grp_NPC/Grp_Olsztynians" unique_id=433397187 instance=ExtResource("7_qx1ny")]
+[node name="Olsztyniak_1" parent="Grp_Entities/Grp_NPC/Grp_Olsztynians" unique_id=1703367098 instance=ExtResource("7_qx1ny")]
+position = Vector2(580, 927)
+
+[node name="Olsztyniak_2" parent="Grp_Entities/Grp_NPC/Grp_Olsztynians" unique_id=433397187 instance=ExtResource("7_qx1ny")]
 position = Vector2(572, 76)
 dialogue_file = "res://dialogues/json/olsztyniak_2.json"
 
-[node name="citizen1" parent="Grp_Entities/Grp_NPC/Grp_Olsztynians" unique_id=1715141588 instance=ExtResource("7_qx1ny")]
-position = Vector2(580, 927)
-dialogue_file = "res://dialogues/json/olsztyniak_1.json"
+[node name="Grp_Doors" type="Node2D" parent="." unique_id=1246661186]
+position = Vector2(-272, 85)
+
+[node name="ObjEntry" parent="Grp_Doors" unique_id=712617926 instance=ExtResource("9_16yne")]
+position = Vector2(-1, -48)
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1088638634]
 
