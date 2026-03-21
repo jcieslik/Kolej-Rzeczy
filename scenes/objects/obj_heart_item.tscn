@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0dl3eqefcjv0"]
+[gd_scene format=3 uid="uid://d0dl3eqefcjv0"]
 
-[ext_resource type="Script" uid="uid://c8cs1hwrei0d0" path="res://scenes/objects/obj_heart_item.gd" id="1_whjua"]
+[ext_resource type="Script" uid="uid://c8cs1hwrei0d0" path="res://Scripts/objects_scripts/obj_heart_item.gd" id="1_whjua"]
 [ext_resource type="Texture2D" uid="uid://b2v42jy44uneg" path="res://Sprites/healthui/hpitem.png" id="2_whjua"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_whjua"]

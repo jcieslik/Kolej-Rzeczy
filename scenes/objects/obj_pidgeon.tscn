@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://l155epg8ol85"]
 
-[ext_resource type="Script" uid="uid://gjl1ce84jibu" path="res://scenes/objects/obj_pidgeon.gd" id="1_ip4jn"]
+[ext_resource type="Script" uid="uid://gjl1ce84jibu" path="res://Scripts/objects_scripts/obj_pidgeon.gd" id="1_ip4jn"]
 [ext_resource type="Texture2D" uid="uid://43vwdyxxqko" path="res://Sprites/pigon/pidgeon_anim.png" id="2_ip4jn"]
 [ext_resource type="Texture2D" uid="uid://551l76v8c83g" path="res://Sprites/pigon/pidgeon.png" id="3_7l2kn"]
 
