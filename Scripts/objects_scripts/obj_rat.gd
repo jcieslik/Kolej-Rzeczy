@@ -52,6 +52,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 	if lives < 1:
+		var itemdrop = preload("res://scenes/objects/obj_grosz_item.tscn").instantiate(); 
+		itemdrop.global_position = global_position; 
+		get_tree().current_scene.add_child(itemdrop)
 		queue_free()
 
 func _on_damage_area_body_entered(body):
