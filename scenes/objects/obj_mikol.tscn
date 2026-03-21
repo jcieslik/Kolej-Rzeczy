@@ -220,7 +220,7 @@ gravity = Vector3(0, 98, 0)
 
 [node name="Obj_Mikol" type="CharacterBody2D" unique_id=1270012136 groups=["player"]]
 collision_layer = 2
-collision_mask = 21
+collision_mask = 5
 script = ExtResource("1_x0mjh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=497094636]

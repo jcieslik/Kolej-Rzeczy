@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://brcbjg1do0hyk"]
 
 [ext_resource type="Script" uid="uid://egrlc4eytwqc" path="res://Scripts/objects_scripts/obj_olsztyniak/obj_olsztyniak.gd" id="1_coq3e"]
-[ext_resource type="Script" path="res://Scripts/npc_dialogue.gd" id="3_00dcf"]
+[ext_resource type="Script" uid="uid://c8d0byiy4asww" path="res://Scripts/npc_dialogue.gd" id="3_00dcf"]
 [ext_resource type="Texture2D" uid="uid://cp1fjret2y1yg" path="res://Sprites/olsztyniak_spritesheet.png" id="4_fmsc1"]
 [ext_resource type="PackedScene" uid="uid://bevi30ubxjs5k" path="res://scenes/objects/dialogbox.tscn" id="4_obc61"]
 [ext_resource type="Texture2D" uid="uid://cfi8q0fkkr48p" path="res://Sprites/olsztyniak_spritesheet_right.png" id="5_b1jur"]
-[ext_resource type="Script" path="res://Scripts/animated_sprites/obj_olsztyniak.gd" id="6_b1jur"]
+[ext_resource type="Script" uid="uid://stj4bhuye5nt" path="res://Scripts/animated_sprites/obj_olsztyniak.gd" id="6_b1jur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dyaho"]
 
@@ -85,7 +85,6 @@ animations = [{
 
 [node name="citizen" type="CharacterBody2D" unique_id=433397187]
 collision_layer = 16
-collision_mask = 31
 script = ExtResource("1_coq3e")
 dialogue_file = "res://dialogues/json/olsztyniak_1.json"
 moving = true
