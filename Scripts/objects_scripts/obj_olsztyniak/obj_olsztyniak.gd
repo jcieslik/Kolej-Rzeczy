@@ -21,10 +21,8 @@ func _process(_delta: float) -> void:
 	
 # funkcja nie dziala nie widzi timera
 func _on_timer_timeout() -> void:
-	print("Timer finished!")
 	var direction
 	moving = !moving
-	print(moving)
 	if moving:
 		var rand = randi()%8
 		match rand:
@@ -50,7 +48,6 @@ func _on_timer_timeout() -> void:
 		current_state = MovementState.IDLE
 	
 	velocity = direction * speed
-	
 	
 enum MovementState {
 	IDLE,
