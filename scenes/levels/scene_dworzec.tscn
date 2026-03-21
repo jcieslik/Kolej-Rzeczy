@@ -246,4 +246,4 @@ position = Vector2(-1, -48)
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1088638634]
 
 [node name="start" type="Marker2D" parent="SpawnPoints" unique_id=478290309]
-position = Vector2(-272, 85)
+position = Vector2(291, 933)
