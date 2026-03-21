@@ -42,6 +42,9 @@ func _physics_process(delta):
 		took_damage = false
 
 	if lives < 1:
+		var itemdrop = preload("res://scenes/objects/obj_grosz_item.tscn").instantiate(); 
+		itemdrop.global_position = global_position; 
+		get_tree().current_scene.add_child(itemdrop)
 		queue_free()
 			
 func take_damage(attack_direction: PlayerDirection):

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://diw6j525xbb3m"]
+
+[ext_resource type="Script" uid="uid://bilgu7uhsnhti" path="res://Scripts/objects_scripts/obj_grosz_item.gd" id="1_n3ngn"]
+[ext_resource type="Texture2D" uid="uid://c4i32pncwe4kw" path="res://Sprites/groszitem.png" id="2_n3ngn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_whjua"]
+
+[node name="Obj_GroszItem" type="Area2D" unique_id=897033348]
+script = ExtResource("1_n3ngn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=853560490]
+position = Vector2(0, 13)
+scale = Vector2(1.0833334, 1.0625)
+texture = ExtResource("2_n3ngn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=769507638]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_whjua")

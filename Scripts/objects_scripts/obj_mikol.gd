@@ -21,6 +21,7 @@ var damage_delay = 0.0
 var damage_max_delay = 1.0
 var was_damaged = false
 var health = 6
+var grosze = 0
 
 var knockback := Vector2.ZERO
 var knockback_decay := 900.0
