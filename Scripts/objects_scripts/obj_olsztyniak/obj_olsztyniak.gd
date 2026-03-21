@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
-@export var speed = 20
-@export var moving = false
+@onready var timer = $Timer
+
 @export_file("*.json")
 var dialogue_file: String
 
-@onready var timer = $Timer
+@export var speed = 20
+@export var moving = false
+var current_state: MovementState = MovementState.IDLE
 
 
 func _ready():
@@ -16,7 +18,6 @@ func _ready():
 
 func _process(_delta: float) -> void:
 	move_and_slide()
-	# timer
 	
 # funkcja nie dziala nie widzi timera
 func _on_timer_timeout() -> void:
@@ -37,5 +38,28 @@ func _on_timer_timeout() -> void:
 			7: direction = Vector2( 1, 1)		
 	else:
 		direction = Vector2(0, 0)
+		
+	if direction.length() > 0:
+		direction = direction.normalized()
+		current_state = MovementState.CRAWLING
+		if direction.x < 0:
+			current_direction = OlsztyniakDirection.LEFT
+		elif direction.x > 0:
+			current_direction = OlsztyniakDirection.RIGHT
+	else:
+		current_state = MovementState.IDLE
 	
 	velocity = direction * speed
+	
+	
+enum MovementState {
+	IDLE,
+	CRAWLING
+}
+
+enum OlsztyniakDirection {
+	LEFT,
+	RIGHT
+}
+
+var current_direction: OlsztyniakDirection = OlsztyniakDirection.RIGHT
