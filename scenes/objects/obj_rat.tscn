@@ -52,6 +52,7 @@ animations = [{
 size = Vector2(28, 26.5)
 
 [node name="Obj_Rat" type="CharacterBody2D" unique_id=197867641]
+collision_layer = 4
 script = ExtResource("1_nxcyv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1579865059]
@@ -66,7 +67,8 @@ animation = &"rat_left"
 [node name="FlashTimer" type="Timer" parent="." unique_id=1984704288]
 
 [node name="DamageArea2D" type="Area2D" parent="." unique_id=782259413]
-collision_layer = 2
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea2D" unique_id=2067479715]
 position = Vector2(0, 2.75)
