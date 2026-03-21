@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://djbuyj004b8ui"]
+[gd_scene format=3 uid="uid://djbuyj004b8ui"]
 
 [ext_resource type="Script" uid="uid://bkhkue18jm2wq" path="res://Scripts/objects_scripts/obj_mikol.gd" id="1_x0mjh"]
 [ext_resource type="Texture2D" uid="uid://c2v6y333rmykh" path="res://Sprites/mikol/mikol_front_idle.png" id="2_5nbmw"]
@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://tkeq5d7hbspv" path="res://Scripts/animated_sprites/obj_mikol.gd" id="10_i8hud"]
 [ext_resource type="Texture2D" uid="uid://dpudv1xt0crmy" path="res://Sprites/partikiel.png" id="11_5xxfr"]
 [ext_resource type="Script" uid="uid://kg078asl2dhu" path="res://gpu_particles_2d.gd" id="12_6o7fp"]
-[ext_resource type="PackedScene" uid="uid://821gwwtyt0pn" path="res://scenes/obj_health_ui.tscn" id="13_u6cmi"]
+[ext_resource type="PackedScene" uid="uid://821gwwtyt0pn" path="res://scenes/objects/obj_health_ui.tscn" id="13_u6cmi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjeav"]
 size = Vector2(16, 16)
@@ -218,19 +218,19 @@ spread = 100.0
 initial_velocity_max = 150.0
 gravity = Vector3(0, 98, 0)
 
-[node name="Obj_Mikol" type="CharacterBody2D" groups=["player"]]
+[node name="Obj_Mikol" type="CharacterBody2D" unique_id=1270012136 groups=["player"]]
 script = ExtResource("1_x0mjh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=497094636]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_cjeav")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2055221436]
 sprite_frames = SubResource("SpriteFrames_ma11h")
 animation = &"move_down"
 script = ExtResource("10_i8hud")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=167502417]
 show_behind_parent = true
 emitting = false
 amount = 6
@@ -242,12 +242,12 @@ trail_lifetime = 0.01
 process_material = SubResource("ParticleProcessMaterial_xyhgh")
 script = ExtResource("12_6o7fp")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2128277160]
 
-[node name="Obj_HealthUI❤" parent="Camera2D" instance=ExtResource("13_u6cmi")]
+[node name="Obj_HealthUI❤" parent="Camera2D" unique_id=963877242 instance=ExtResource("13_u6cmi")]
 offset_left = -288.0
 offset_top = -223.0
 offset_right = -161.0
 offset_bottom = -80.0
 
-[node name="FlashTimer" type="Timer" parent="."]
+[node name="FlashTimer" type="Timer" parent="." unique_id=599695923]

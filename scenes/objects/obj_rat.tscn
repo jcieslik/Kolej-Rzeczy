@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://711qjs4tgsm4"]
+[gd_scene format=3 uid="uid://jy5ooa22ue71"]
 
 [ext_resource type="Script" uid="uid://6ihs05e247x3" path="res://Scripts/objects_scripts/obj_rat.gd" id="1_nxcyv"]
 [ext_resource type="Texture2D" uid="uid://bs6mbbo3vvemy" path="res://Sprites/rat_left_sheet.png" id="2_ctj12"]
@@ -48,16 +48,26 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Obj_Rat" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxcyv"]
+size = Vector2(28, 26.5)
+
+[node name="Obj_Rat" type="CharacterBody2D" unique_id=197867641]
 script = ExtResource("1_nxcyv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1579865059]
 physics_interpolation_mode = 1
 position = Vector2(-0.5, 2.5)
 shape = SubResource("RectangleShape2D_51jln")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=965570552]
 sprite_frames = SubResource("SpriteFrames_q3a1d")
 animation = &"rat_left"
 
-[node name="FlashTimer" type="Timer" parent="."]
+[node name="FlashTimer" type="Timer" parent="." unique_id=1984704288]
+
+[node name="DamageArea2D" type="Area2D" parent="." unique_id=782259413]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea2D" unique_id=2067479715]
+position = Vector2(0, 2.75)
+shape = SubResource("RectangleShape2D_nxcyv")
