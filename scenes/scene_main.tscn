@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b5t06gjv8d6dw" path="res://Scripts/objects_scripts/scene_main.gd" id="1_7y7v8"]
 [ext_resource type="PackedScene" uid="uid://djbuyj004b8ui" path="res://scenes/objects/obj_mikol.tscn" id="2_1o4gp"]
 
-[node name="Scene_Main" type="Node2D" unique_id=1251578821]
+[node name="Scene_Main" type="Node2D" unique_id=1251578821 groups=["main"]]
 script = ExtResource("1_7y7v8")
 
 [node name="Player" parent="." unique_id=58621823 instance=ExtResource("2_1o4gp")]

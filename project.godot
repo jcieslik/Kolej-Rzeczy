@@ -29,6 +29,12 @@ window/size/window_height_override=960
 window/stretch/mode="viewport"
 window/per_pixel_transparency/allowed=true
 
+[global_group]
+
+player_action=""
+player=""
+main=""
+
 [input]
 
 dash_action={
@@ -75,6 +81,8 @@ move_down={
 2d_physics/layer_3="ENEMY"
 2d_physics/layer_4="ENEMY_DAMAGE"
 2d_physics/layer_5="NPC"
+2d_physics/layer_6="PLAYER_ACTION"
+2d_physics/layer_7="ENTRY"
 
 [rendering]
 

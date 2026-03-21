@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://s6rqnbdh0aiy"]
 
+[ext_resource type="Script" uid="uid://0gcdhmc1j0qr" path="res://scenes/objects/obj_entry.gd" id="1_d4sh2"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpcca"]
 size = Vector2(30, 24)
 
 [node name="ObjEntry" type="Node2D" unique_id=712617926]
+script = ExtResource("1_d4sh2")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1289155678]
+collision_layer = 64
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=845009506]
 position = Vector2(0, 2)

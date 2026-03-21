@@ -257,8 +257,13 @@ position = Vector2(-272, 85)
 
 [node name="ObjEntry" parent="Grp_Doors" unique_id=712617926 instance=ExtResource("9_16yne")]
 position = Vector2(-1, -48)
+target_level = "res://scenes/levels/scene_gruzowisko.tscn"
+target_spawn = "entry_from_dworzec"
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1088638634]
 
 [node name="start" type="Marker2D" parent="SpawnPoints" unique_id=478290309]
 position = Vector2(291, 933)
+
+[node name="entry_from_gruzowisko" type="Marker2D" parent="SpawnPoints" unique_id=40826054]
+position = Vector2(-273, 42)

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bqx4vm7uwtms1" path="res://Sprites/tileset1B.png" id="3_l1a8d"]
 [ext_resource type="PackedScene" uid="uid://l155epg8ol85" path="res://scenes/objects/obj_pidgeon.tscn" id="4_l1a8d"]
 [ext_resource type="PackedScene" uid="uid://jy5ooa22ue71" path="res://scenes/objects/obj_rat.tscn" id="5_7xkon"]
+[ext_resource type="PackedScene" uid="uid://s6rqnbdh0aiy" path="res://scenes/objects/obj_entry.tscn" id="6_7xkon"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xkon"]
 resource_name = "Til_Shad"
@@ -222,4 +223,17 @@ position = Vector2(191, 301)
 position = Vector2(489, 301)
 
 [node name="Obj_Rat3" parent="Grp_Entities/Grp_Ratz" unique_id=1814407930 instance=ExtResource("5_7xkon")]
-position = Vector2(337, 99)
+position = Vector2(334, 218)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1280937483]
+
+[node name="entry_from_dworzec" type="Marker2D" parent="SpawnPoints" unique_id=890343699]
+position = Vector2(335, 492)
+
+[node name="Grp_Doors" type="Node2D" parent="." unique_id=1633432365]
+position = Vector2(-272, 85)
+
+[node name="ObjEntry" parent="Grp_Doors" unique_id=712617926 instance=ExtResource("6_7xkon")]
+position = Vector2(607, 412)
+target_level = "res://scenes/levels/scene_dworzec.tscn"
+target_spawn = "entry_from_gruzowisko"
