@@ -249,7 +249,7 @@ position = Vector2(-115, 850)
 position = Vector2(580, 927)
 
 [node name="Olsztyniak_2" parent="Grp_Entities/Grp_NPC/Grp_Olsztynians" unique_id=433397187 instance=ExtResource("7_qx1ny")]
-position = Vector2(572, 76)
+position = Vector2(575, 77)
 dialogue_file = "res://dialogues/json/olsztyniak_2.json"
 
 [node name="Grp_Doors" type="Node2D" parent="." unique_id=1246661186]
@@ -258,6 +258,11 @@ position = Vector2(-272, 85)
 [node name="ObjEntry" parent="Grp_Doors" unique_id=712617926 instance=ExtResource("9_16yne")]
 position = Vector2(-1, -48)
 target_level = "res://scenes/levels/scene_gruzowisko.tscn"
+target_spawn = "entry_from_dworzec"
+
+[node name="ObjEntry2" parent="Grp_Doors" unique_id=544214678 instance=ExtResource("9_16yne")]
+position = Vector2(1407, 15)
+target_level = "res://scenes/levels/scene_tunel.tscn"
 target_spawn = "entry_from_dworzec"
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1088638634]
